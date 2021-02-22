@@ -1,0 +1,18 @@
+{
+	"font": [
+		"src/webfonts/**"
+	],
+	"js": [
+		"bower_components/jquery/dist/jquery.min.js",
+		"src/_plugins/**.min.js",
+		"src/_plugins/**.js",
+		"src/_plugins/**/**.min.js",
+		"bower_components/lazysizes/lazysizes.js",
+		"bower_components/fancybox/dist/jquery.fancybox.min.js"
+	],
+	"css": [
+		"src/_plugins/**.css",
+		"src/_plugins/swiper/swiper-bundle.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css"
+	]
+}

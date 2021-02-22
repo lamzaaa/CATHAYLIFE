@@ -1,0 +1,83 @@
+.home-benefit
+	.wrapper-benefit-list
+		.col-item
+			cursor: pointer
+			position: relative
+			padding: 0 5px
+			flex: 1
+			flex-direction: row
+			flex-wrap: wrap
+
+			.img
+				position: relative
+				&::after
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					width: 100%
+					height: 100%
+					opacity: 0
+					visibility: hidden
+					background-color: transparent
+					transition: all .5s cubic-bezier(.22, .44, 0, 1)
+				&::before
+					position: absolute
+					bottom: 0
+					left: 0
+					content: ''
+					width: 100%
+					height: 5px
+					z-index: 2
+				a
+					+img-ratio(355/300)
+			.content
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				padding: 30px
+				padding-top: 38px
+				.title
+					line-height: 36px
+				.desc
+					line-height: 20px
+					padding: 20px 0
+					opacity: 0
+					visibility: hidden
+					transition: all 1s cubic-bezier(.22, .44, 0, 1)
+				.btn-view-more
+					opacity: 0
+					visibility: hidden
+					transition: all 1s cubic-bezier(.22, .44, 0, 1)
+
+			&:first-child
+				padding-left: 0
+				.img
+					&::before
+						background: #00994e
+			&:nth-child(2)
+				.img
+					&::before
+						background: #71bf44
+			&:nth-child(3)
+				.img
+					&::before
+						background: #ffd800
+			&:last-child
+				padding-right: 0
+				.img
+					&::before
+						background: #71b0e5
+			&:hover
+				.img
+					&::after
+						opacity: 1
+						visibility: visible
+						background-color: rgba($color: $black, $alpha: .5)
+				.content
+					.desc,
+					.btn-view-more
+						opacity: 1
+						visibility: visible

@@ -1,0 +1,27 @@
+.prize
+	.wrapper-content
+		margin-bottom: 48px
+		background-color: #f8f8f8
+		.content
+			padding-left: 40px
+			padding-top: 40px
+			padding-right: 45px
+			padding-bottom: 40px
+			ul
+				list-style-type: disc
+				li
+					position: relative
+					color: #c7c7c7
+					p
+						line-height: 26px
+						color: $text
+		.img
+			height: 100%
+			+img-ratio(400/674)
+		@media screen and ( max-width: 991.98px )
+			margin-bottom: 0
+			.content
+				padding: 30px
+			.col-lg-6
+				&:first-child
+					order: 2

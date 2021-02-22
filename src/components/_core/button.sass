@@ -1,0 +1,111 @@
+.btn
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	white-space: nowrap
+	vertical-align: middle
+	user-select: none
+	font-size: 1rem
+	font-weight: 500
+	&-toggle
+		cursor: pointer
+		position: relative
+		padding: 0
+		min-width: 30px
+		min-height: 23px
+		margin-left: 20px
+		transition: .3s all linear
+		span
+			display: block
+			position: absolute
+			height: 3px
+			width: 100%
+			background: $main
+			border-radius: 9px
+			opacity: 1
+			left: 0
+			-webkit-transform: rotate(0deg)
+			-moz-transform: rotate(0deg)
+			-o-transform: rotate(0deg)
+			transform: rotate(0deg)
+			transition: .5s ease-in-out
+			&:nth-child(1)
+				top: 0
+			&:nth-child(2),
+			&:nth-child(3)
+				top: 10px
+			&:nth-child(4)
+				top: 20px
+		&.active
+			span
+				&:nth-child(1)
+					top: 18px
+					width: 0%
+					left: 50%
+				&:nth-child(2)
+					-webkit-transform: rotate(45deg)
+					-moz-transform: rotate(45deg)
+					-o-transform: rotate(45deg)
+					transform: rotate(45deg)
+				&:nth-child(3)
+					-webkit-transform: rotate(-45deg)
+					-moz-transform: rotate(-45deg)
+					-o-transform: rotate(-45deg)
+					transform: rotate(-45deg)
+				&:nth-child(4)
+					top: 18px
+					width: 0%
+					left: 50%
+		@media screen and ( min-width: 991.98px )
+			display: none
+		@media(max-width: 575px)
+			margin-left: 10px
+			+ span
+				display: none
+	&-apply,
+	&-view
+		width: 100%
+		padding: 10px
+		margin-top: 10px
+		color: $main
+		text-align: center
+		font-weight: 700
+		border: solid 1px $main
+	&-defaul
+		padding: 8px 16px
+		border-radius: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 1rem
+		font-weight: 500
+		em
+			font-size: 18/16*1rem
+			padding-right: 7px
+	&-yellow
+		background: $yellow
+	&-green
+		background: $green
+	&-view-more
+		width: 140px
+		height: 40px
+		border-radius: 20px
+		border: solid 1px $main
+		color: $white
+		background: transparent
+		transition: all .5s
+		&:hover
+			background: $main
+			border: solid 1px transparent
+	&-readmore
+		width: 160px
+		height: 40px
+		border-radius: 20px
+		border: solid 1px #333333
+		transition: all .5s
+
+		&:hover
+			background: $main
+			border: solid 1px transparent
+			color: $white

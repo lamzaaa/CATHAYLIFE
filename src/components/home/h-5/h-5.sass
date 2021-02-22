@@ -1,0 +1,51 @@
+.home-story
+	background: #e7efe3
+	.slide-knowledge
+		position: relative
+		.swiper-inner
+			background: $white
+			.img
+				a
+					+img-ratio(165/285)
+			.content
+				padding: 20px
+				.title
+					padding-top: 20px
+					border-top: solid 1px #e5e5e5
+					a
+						font-weight: 400
+						transition: all .5s
+			.view-more
+				width: 100%
+				padding: 8px 26px
+				opacity: 0
+				visibility: hidden
+				background: #f5f5f5
+				transition: all .5s
+
+				&::after
+					display: none
+				a
+					position: relative
+					padding-right: 13px
+					&::after
+						position: absolute
+						top: 50%
+						left: 100%
+						width: 20px
+						height: 2px
+						background: $white
+						content: ''
+						transform: translateY(-50%)
+			&:hover
+				.content
+					.title
+						a
+							font-weight: 700
+				.view-more
+					opacity: 1
+					visibility: visible
+					a
+						color: $main
+						&::after
+							background: $main

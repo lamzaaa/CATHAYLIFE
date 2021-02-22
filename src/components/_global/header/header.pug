@@ -1,0 +1,52 @@
+<!-- HEADER -->
+header
+	.navbar-top.d-flex.align-center
+		.container.d-flex.align-center
+			ul.list-top.ml-auto.d-flex.align-center
+				li.nav-item
+					a.nav-link(href="index.html")
+						img(src="./img/logo-header-top.png", alt="")
+				li.nav-item
+					a.nav-link.f-18.color-main(href="")
+						em.fab.fa-facebook-f
+				li.nav-item
+					a.nav-link.f-18.color-main(href="")
+						em.fab.fa-youtube
+				li.nav-item
+					a.nav-link(href="")
+						img(src="./img/icon/zalo.png", alt="")
+			.search-icon
+				em.material-icons search
+			ul.language.d-flex.align-center
+				li.active
+					a.f-12(href="") VN
+				li
+					a.f-12(href="") EN
+	.navbar-bottom
+		.container.d-flex.align-center
+			a.navbar-brand(href="")
+				img(src="./img/logo.png" alt="")
+			h1.header-title.f-16.fw-700.text-uppercase hạnh phúc mỗi ngày 
+			ul.navbar-nav.d-flex.align-center.ml-auto
+				li.nav-item
+					a.nav-link.f-16(href='') Lập kế hoạch sống
+				li.nav-item
+					a.nav-link.f-16(href='') Bảo vệ hạnh phúc
+				li.nav-item
+					a.nav-link.f-16(href='') Sự kiện
+			a.btn.btn-defaul.btn-yellow(href="") 
+				em.material-icons important_devices
+				| Bảo hiểm trực tuyến
+			a.btn.btn-defaul.btn-green.color-white(href="") 
+				em.material-icons event
+				| Đăng ký tư vấn
+			.btn.btn-toggle
+				span
+				span
+				span
+				span
+		.wrapper-search.hidden
+			.form-group
+				input(type="text" placeholder="Nhập từ khoá...")
+				button.searchbutton.btn.btn__search
+					em.material-icons search

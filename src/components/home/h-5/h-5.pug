@@ -1,0 +1,20 @@
+section.section.home-story
+	.container 
+		.section-title.text-center Câu chuyện bảo hiểm
+		.slide-knowledge
+			.swiper-container
+				.swiper-wrapper
+					-for(i=1; i<5; i++)
+						.swiper-slide
+							.swiper-inner.zoom-img
+								.img
+									a(href="")
+										img.lazyload(data-src="./img/home/h-5."+i+".png", alt="")
+								.content 
+									time 05.12.2020
+									.title 
+										a.lcl.lcl-2(href="") Điền tờ khai thông tin một cách chính xác và trung thực 
+								.view-more
+									a(href="") Xem thêm
+			.swiper-button-next
+			.swiper-button-prev

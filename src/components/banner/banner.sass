@@ -1,0 +1,89 @@
+#section-banner
+	.home-banner
+		width: 100%
+		height: 100%
+		.slide-inner
+			position: relative
+			width: 100vw
+			height: 720px
+			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+			.content
+				position: absolute
+				top: 50%
+				left: 0
+				width: 100%
+				z-index: 2
+				.title
+					font-size: 36/16*1rem
+					transition: all 3s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s
+					transform: translate3d(20%, 0, 0)
+					opacity: 0
+					display: inline-block
+		.swiper-slide
+			&-active
+				.slide-inner
+					.content
+						.title
+							transform: translate3d(0, 0, 0)
+							opacity: 1
+			.slide-button
+				position: absolute
+				bottom: 42px
+				left: 50%
+				transform: translateX(-50%)
+				z-index: 9
+				cursor: pointer
+				.material-icons
+					font-size: 48/16*1rem
+					color: $white
+					animation: sdb05 1.5s infinite
+		.swiper-pagination
+			&-bullet
+				width: 10px
+				height: 10px
+				background: $white
+				border: 1px solid transparent
+				opacity: 1
+				&:focus
+					outline: none
+				&-active
+					background: $yellow
+					border: 1px solid $white
+		@media screen and ( max-width: 991.98px )
+			.slide-inner
+				.content
+					.title
+						max-width: 100%
+						font-size: 30/16*1rem
+		@media screen and ( max-width: 575.98px )
+			height: 50vh
+			.slide-inner
+				height: 50vh
+				.content
+					.title
+						bottom: 50px
+						width: 100%
+						font-size: 20/16*1rem
+						padding: 0 10px
+			.swiper-slide
+				.slide-button
+					bottom: 10px
+#pagebanner
+	.img
+		width: 100%
+		height: 500px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: bottom
+	@media screen and ( max-width: 991.98px )
+		.img
+			height: 345px
+	@media screen and ( max-width: 575.98px )
+		.img
+			height: auto

@@ -1,0 +1,100 @@
+header
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 1000
+	background: $white
+	.navbar-top
+		background: #f0f0f0
+		padding: 4.5px 0
+		.list-top
+			.nav-item
+				&:first-child
+					position: relative
+					padding-right: 15px
+					.nav-link
+						padding: 0 17px
+					&::before,
+					&::after
+						position: absolute
+						content: ''
+						width: 1px
+						height: 100%
+						background: #e5e5e5
+				+ .nav-item
+					width: 30px
+					height: 30px
+					border-radius: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-left: 5px
+					background: $white
+					.nav-link
+						padding: 0
+		.search-icon
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-left: 5px
+			background: $white
+			margin-right: 20px
+			cursor: pointer
+			em
+				font-size: 18/16*1rem
+				color: $main
+		.language
+			li
+				position: relative
+				a
+					color: #cccc
+				&:first-child
+					padding-right: 7px
+				&:last-child
+					padding-left: 7px
+					&::before
+						position: absolute
+						content: '|'
+						color: #cccc
+						left: -3px
+				&.active
+					a
+						text-decoration: underline
+						color: $main
+	.navbar-bottom
+		padding-top: 12px
+		padding-bottom: 13px
+		.navbar-brand
+			margin-right: 30px
+		.header-title
+			position: relative
+			padding-right: 25px
+			&::after
+				position: absolute
+				top: 50%
+				right: 0
+				content: ''
+				width: 1px
+				height: 55px
+				transform: translateY(-50%)
+				background: #f1f1f1
+
+		.navbar-nav
+			.nav-item
+				.nav-link
+					padding: 1rem
+		.btn
+			margin-left: 15px
+			&-yellow
+				transition: all ease-in-out .5s
+				&:hover
+					background: $green
+					color: $white
+			&-green
+				transition: all ease-in-out .5s
+				&:hover
+					background: $yellow
+					color: $text

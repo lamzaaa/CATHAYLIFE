@@ -1,0 +1,71 @@
+@-webkit-keyframes shine
+	100%
+	left: 125%
+
+@keyframes shine
+	100%
+		left: 125%
+@keyframes flashing
+	0%
+		opacity: 0.35
+	100%
+		opacity: 1
+@-webkit-keyframes sdb05
+	0%
+	-webkit-transform: translateY(0)
+	opacity: 0
+
+	50%
+	opacity: 1
+
+	100%
+	-webkit-transform: translateY(-20px)
+	opacity: 0
+
+@keyframes sdb05
+	0%
+		transform: translateY(0)
+		opacity: 0
+
+	50%
+		opacity: 1
+
+	100%
+		transform: translateY(20px)
+		opacity: 0
+
+.zoom-img
+	transition: all 1s cubic-bezier(.22, .44, 0, 1)
+	.item-img,
+	.img,
+	.big-img,
+	.small-img
+		position: relative
+		overflow: hidden
+		cursor: pointer
+		img
+			transition: all 1s cubic-bezier(.22, .44, 0, 1)
+			transform: scale(1)
+		&::before
+			position: absolute
+			top: 0
+			left: -100%
+			z-index: 2
+			display: block
+			content: ''
+			width: 50%
+			height: 100%
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+			background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+			-webkit-transform: skewX(-25deg)
+			transform: skewX(-25deg)
+	&:hover
+		.item-img,
+		.img,
+		.big-img,
+		.small-img
+			img
+				transform: scale(1.05)
+			&::before
+				-webkit-animation: shine .75s
+				animation: shine .75s

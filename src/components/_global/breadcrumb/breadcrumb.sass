@@ -1,0 +1,47 @@
+.breadcrumb-wrapper
+	width: 100%
+	background-color: #f5f5f5
+	.breadcrumb
+		height: 40px
+		display: flex
+		align-items: center
+		background-color: transparent
+		flex-wrap: wrap
+		list-style: none
+		margin-bottom: 0
+		padding: 0px
+		li
+			position: relative
+			display: flex
+			align-items: center
+			color: #999999
+			font-size: 12px
+			font-weight: 400
+			&:first-child
+				width: 1rem
+				&:hover
+					a
+						&::before
+				a
+					font-size: 0px
+					&::before
+						font-size: 1rem
+						font-weight: 400
+						content: "home"
+						font-family: Material Icons
+						transition: .3s all ease-in-out
+			& + li
+				margin-left: 20px
+			&.active
+			&:hover
+
+		li+li 
+			&::before
+				position: absolute
+				top: 50%
+				left: -20px
+				transform: translateY(-50%)
+				content: 'navigate_next'
+				font-size: 18/16*1rem
+				font-family: Material Icons
+				color: #999999
