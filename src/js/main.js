@@ -47,8 +47,8 @@ const swiperInit = () => {
 			crossFade: true,
 		},
 		pagination: {
-			el: '.home-banner .swiper-pagination',
-			clickable: true
+			el: ".home-banner .swiper-pagination",
+			clickable: true,
 		},
 	});
 	let fieldSlide = new Swiper(".slide-knowledge .swiper-container", {
@@ -83,209 +83,18 @@ const swiperInit = () => {
 			},
 		},
 	});
-	let galleryThumbs = new Swiper('.block-slide .gallery-thumbs', {
-		spaceBetween: 10,
-		slidesPerView: 8,
-		freeMode: true,
-		loopedSlides: 8,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		breakpoints: {
-			320: {
-				slidesPerView: 4,
-			},
-			375: {
-				slidesPerView: 5,
-			},
-			575: {
-				slidesPerView: 5,
-			},
-			768: {
-				slidesPerView: 5,
-			},
-			1280: {
-				slidesPerView: 8,
-			},
-		},
-	});
-	let galleryTop = new Swiper('.block-slide .gallery-top', {
-		spaceBetween: 10,
-		loopedSlides: 8,
-		navigation: {
-			nextEl: '.block-slide .swiper-button-next',
-			prevEl: '.block-slide .swiper-button-prev',
-		},
-		thumbs: {
-			swiper: galleryThumbs,
-		},
-	});
-	let gallerySlide = new Swiper('.gallery-slide .swiper-container', {
-		spaceBetween: 30,
+
+	let gallerySlide = new Swiper(".wrapper-slide .swiper-container", {
+		spaceBetween: 1,
 		centeredSlides: true,
 		roundLengths: true,
 		loop: true,
 		navigation: {
-			nextEl: '.gallery-slide .swiper-button-next',
-			prevEl: '.gallery-slide .swiper-button-prev',
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
 		},
 	});
-	let galleryThumbsVideo = new Swiper('.video-slide .gallery-thumbs', {
-		spaceBetween: 30,
-		slidesPerView: 5,
-		freeMode: true,
-		loopedSlides: 5,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		breakpoints: {
-			320: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-			},
-			375: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-			},
-			575: {
-				slidesPerView: 4,
-			},
-			768: {
-				slidesPerView: 5,
-			},
-			1280: {
-				slidesPerView: 5,
-			},
-		},
-	});
-	let galleryTopVideo = new Swiper('.video-slide .gallery-top', {
 
-		spaceBetween: 10,
-		loopedSlides: 5,
-		navigation: {
-			nextEl: '.video-slide .swiper-button-next',
-			prevEl: '.video-slide .swiper-button-prev',
-		},
-		thumbs: {
-			swiper: galleryThumbsVideo,
-		},
-	});
-	let galleryThumbsDetailProject = new Swiper('.slide-detail .gallery-thumbs', {
-		direction: 'vertical',
-		spaceBetween: 30,
-		slidesPerView: 4,
-		loopedSlides: 4,
-		loop: true,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		breakpoints: {
-			320: {
-				direction: 'horizontal',
-				slidesPerView: 2,
-				spaceBetween: 10
-			},
-			376: {
-				direction: 'horizontal',
-				slidesPerView: 3,
-				spaceBetween: 10
-			},
-			576: {
-				direction: 'horizontal',
-				slidesPerView: 3,
-				spaceBetween: 10
-			},
-			768: {
-				direction: 'horizontal',
-				slidesPerView: 4,
-				spaceBetween: 10
-			},
-			1025: {
-				slidesPerView: 4,
-			},
-			1200: {
-				slidesPerView: 4,
-			},
-		},
-	});
-	let galleryTopDetailProject = new Swiper('.slide-detail .gallery-top', {
-		spaceBetween: 30,
-		observer: true,
-		observeParents: true,
-		loop: true,
-		navigation: {
-			nextEl: '.gallery-thumbs .swiper-button-next',
-			prevEl: '.gallery-thumbs .swiper-button-prev',
-		},
-		pagination: {
-			el: '.gallery-thumbs .swiper-pagination',
-			clickable: true,
-		},
-		thumbs: {
-			swiper: galleryThumbsDetailProject,
-		},
-	});
-	let projectOther = new Swiper(".slide-other .swiper-container", {
-		speed: 300,
-		loop: true,
-		observer: true,
-		observeParents: true,
-		navigation: {
-			nextEl: ".slide-other .swiper-button-next",
-			prevEl: ".slide-other .swiper-button-prev",
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-			},
-			375: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-			},
-			575: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-			},
-			1280: {
-				spaceBetween: 30,
-				slidesPerView: 3,
-			},
-		},
-	});
-	let sildeTabs = new Swiper(".silde-wrapper .swiper-container", {
-		speed: 300,
-		loop: false,
-		observer: true,
-		observeParents: true,
-		navigation: {
-			nextEl: ".silde-wrapper .swiper-button-next",
-			prevEl: ".silde-wrapper .swiper-button-prev",
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 3,
-				spaceBetween: 10,
-			},
-			375: {
-				slidesPerView: 3,
-				spaceBetween: 10,
-			},
-			575: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 6,
-				spaceBetween: 20,
-			},
-			1280: {
-				spaceBetween: 30,
-				slidesPerView: 8,
-			},
-		},
-	});
 	let newsOther = new Swiper(".slide-other-news .swiper-container", {
 		speed: 300,
 		loop: true,
@@ -349,8 +158,9 @@ const initMapping = () => {
 const scrollDown = () => {
 	$(".slide-button").on("click", function (e) {
 		e.preventDefault();
-		$("html, body").animate({
-				scrollTop: $($(this).attr("href")).offset().top
+		$("html, body").animate(
+			{
+				scrollTop: $($(this).attr("href")).offset().top,
 			},
 			500,
 			"linear"
@@ -395,111 +205,133 @@ const homePopup = () => {
 	$(document).ready(function () {
 		$("#popup_1").fancybox().trigger("click");
 	});
-}
+};
 
 /*=====================ACTIVE CATE=========================*/
 const activeCatelog = () => {
-	if ($('#tool-item').length >= 1 && $(window).width() < 992) {
-		$('#tool-item').on('click', function () {
-			$('section').find('.catelogry').toggleClass('active')
-		})
+	if ($("#tool-item").length >= 1 && $(window).width() < 992) {
+		$("#tool-item").on("click", function () {
+			$("section").find(".catelogry").toggleClass("active");
+		});
 	}
 	if ($(window).width() < 1200) {
-		$('#tool-item').on('click', function () {
-			$(this).next().toggleClass('active')
+		$("#tool-item").on("click", function () {
+			$(this).next().toggleClass("active");
 		});
-
 	}
-}
+};
 
 /*======================SLIDE TABS=================================*/
 const slideTab = () => {
-	$(".tabs").find('.swiper-inner').on("click", function () {
-		let $panel = $(this).closest(".tab-panel");
-		$panel.find(".swiper-inner.active").removeClass("active");
-		$(this).addClass("active");
-		let panelToShow = $(this).attr("data-href");
-		$panel.find(".panel.active").fadeOut(300, showNextPanel);
-
-		function showNextPanel() {
-			$(this).removeClass("active");
-			$("#" + panelToShow).fadeIn(300, function () {
-				$(this).addClass("active").fadeIn(300);
-			});
-		}
-	});
-	$('.recruit-list').find('#select-box').on('change', function () {
-		if ($(this).children(':selected')) {
-			let panelToShow = $('#select-box option').attr("value");
-			$('.recruit-list').find('.tab-content.active').fadeOut(300, showNextPanel);
+	$(".tabs")
+		.find(".swiper-inner")
+		.on("click", function () {
+			let $panel = $(this).closest(".tab-panel");
+			$panel.find(".swiper-inner.active").removeClass("active");
+			$(this).addClass("active");
+			let panelToShow = $(this).attr("data-href");
+			$panel.find(".panel.active").fadeOut(300, showNextPanel);
 
 			function showNextPanel() {
+				$(this).removeClass("active");
 				$("#" + panelToShow).fadeIn(300, function () {
-					$('.recruit-list').find('.tab-content').addClass("active").fadeIn(300);
+					$(this).addClass("active").fadeIn(300);
 				});
 			}
-		}
-	})
+		});
+	$(".recruit-list")
+		.find("#select-box")
+		.on("change", function () {
+			if ($(this).children(":selected")) {
+				let panelToShow = $("#select-box option").attr("value");
+				$(".recruit-list")
+					.find(".tab-content.active")
+					.fadeOut(300, showNextPanel);
 
-}
+				function showNextPanel() {
+					$("#" + panelToShow).fadeIn(300, function () {
+						$(".recruit-list")
+							.find(".tab-content")
+							.addClass("active")
+							.fadeIn(300);
+					});
+				}
+			}
+		});
+};
 /*======================CHANGEPLACEHOLDER=================================*/
 const changePlaceholder = () => {
-	$('.subscribe .subscribefrm').find('input').attr('placeholder', 'Địa chỉ email...');
-}
+	$(".subscribe .subscribefrm")
+		.find("input")
+		.attr("placeholder", "Địa chỉ email...");
+};
 /*======================PHAN TRANG=================================*/
 const phantrang = () => {
-	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
-}
+	$(".modulepager")
+		.find(".pagination")
+		.find("li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage")
+		.parent()
+		.hide();
+};
 
 /*======================TOGGLE NAV=================================*/
 const toggleNav = () => {
-	$('.report-page .navbar').find('.dropdown .caption em').on('click', function () {
-		$('.report-page .navbar').find('.dropdown-menu').slideToggle()
-	});
-	if ($(window).width() < 575.98) {
-		$('.recruit-list .wrapper-top .wrapper-filter .dropdown .title').find('em').on('click', function () {
-			$('.recruit-list .wrapper-top .wrapper-filter .dropdown').find('.dropdown-menu').slideToggle()
+	$(".report-page .navbar")
+		.find(".dropdown .caption em")
+		.on("click", function () {
+			$(".report-page .navbar").find(".dropdown-menu").slideToggle();
 		});
+	if ($(window).width() < 575.98) {
+		$(".recruit-list .wrapper-top .wrapper-filter .dropdown .title")
+			.find("em")
+			.on("click", function () {
+				$(".recruit-list .wrapper-top .wrapper-filter .dropdown")
+					.find(".dropdown-menu")
+					.slideToggle();
+			});
 	}
-
-}
+};
 
 /*==================== SCROLL SECTION ===================*/
 const crollToDiv = () => {
-	$('#catelogry ul li a').on('click', function (event) {
-		$(this).parent('li').addClass('active');
+	$("#catelogry ul li a").on("click", function (event) {
+		$(this).parent("li").addClass("active");
 		if (this.hash !== "") {
 			event.preventDefault();
 			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 500, function () {
-				window.location.hash = hash;
-			});
+			$("html, body").animate(
+				{
+					scrollTop: $(hash).offset().top,
+				},
+				500,
+				function () {
+					window.location.hash = hash;
+				}
+			);
 		}
-		$('#categroly ul li a').not(this).parent('li').removeClass('active');
+		$("#categroly ul li a").not(this).parent("li").removeClass("active");
 		window.addEventListener("scroll", function () {
-			var bannerheight = $('#pagebanner').outerHeight();
+			var bannerheight = $("#pagebanner").outerHeight();
 			if (window.pageYOffset > bannerheight) {
 				$("#catelogry").addClass("scolled");
 			} else {
 				$("#catelogry").removeClass("scolled");
 			}
-		})
+		});
 	});
-	if ($('#catelogry').length >= 1) {
+	if ($("#catelogry").length >= 1) {
 		window.addEventListener("scroll", function () {
-			var bannerheight = $('#pagebanner').outerHeight();
-			var heightHeader = $('header').outerHeight();
+			var bannerheight = $("#pagebanner").outerHeight();
+			var heightHeader = $("header").outerHeight();
 			if (window.pageYOffset > bannerheight) {
 				$("#catelogry").addClass("scolled");
-				$('.scolled').css('top', heightHeader)
+				$(".scolled").css("top", heightHeader);
 			} else {
 				$("#catelogry").removeClass("scolled");
 			}
-		})
+		});
 	}
-}
+};
 
 /*================TABSPANEL======================*/
 const tabs = () => {
@@ -517,17 +349,23 @@ const tabs = () => {
 			});
 		}
 	});
-}
+};
 
 /*====================FAQLIST=================*/
 const faqList = () => {
-	$('#faq-list').find('.title').on('click', function () {
-		$(this).parent().toggleClass('active');
-		$(this).siblings('.desc').slideToggle();
-		$('#faq-list').find('.title').not(this).siblings('.desc').slideUp();
-		$('#faq-list').find('.title').not(this).parent().removeClass('active')
-	})
-}
+	$("#faq-list")
+		.find(".title")
+		.on("click", function () {
+			$(this).parent().toggleClass("active");
+			$(this).siblings(".desc").slideToggle();
+			$("#faq-list").find(".title").not(this).siblings(".desc").slideUp();
+			$("#faq-list")
+				.find(".title")
+				.not(this)
+				.parent()
+				.removeClass("active");
+		});
+};
 
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
@@ -554,7 +392,8 @@ $(document).ready(function () {
 
 	function theTabClicks(tabClickEvent) {
 		var clickedTab = tabClickEvent.currentTarget;
-		var tabParent = tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
+		var tabParent =
+			tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
 		var theTabs = tabParent.querySelectorAll(".nav-tabs li");
 		for (var i = 0; i < theTabs.length; i++) {
 			theTabs[i].classList.remove("active");
@@ -572,6 +411,6 @@ $(document).ready(function () {
 		activePane.classList.add("active");
 	}
 	for (i = 0; i < theTabs.length; i++) {
-		theTabs[i].addEventListener("click", theTabClicks)
+		theTabs[i].addEventListener("click", theTabClicks);
 	}
 });

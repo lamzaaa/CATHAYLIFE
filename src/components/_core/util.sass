@@ -44,25 +44,25 @@
 	border-radius: 50%
 	background: $white
 
-	&::after
+	&::before
 		color: #999999
-		font-size: 0 !important
 		position: absolute
 		top: 50%
 		transform: translateY(-50%)
+		font-size: 0
 	&:focus
 		border: none
 		outline: none
 .swiper-button-next
 	right: -65px !important
-	&::after
-		content: url('../img/icon/next.png') !important
+	&::before
+		content: url('../img/icon/next.png')
 		left: 0
 .swiper-button-prev
 	left: -65px !important
-	&::after
+	&::before
 		right: 0
-		content: url('../img/icon/prev.png') !important
+		content: url('../img/icon/prev.png')
 .catelogry
 	padding: 18px 0
 	margin-bottom: 64px
