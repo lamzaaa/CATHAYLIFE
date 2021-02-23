@@ -1,6 +1,28 @@
 .breadcrumb-wrapper
-	width: 100%
-	background-color: #f5f5f5
+	position: absolute
+	left: 50%
+	bottom: 56px
+	transform: translateX(-50%)
+	display: flex
+	flex-direction: column
+	align-items: center
+	.breadcrumb-title
+		position: relative
+		color: $white
+		font-weight: 700
+		font-size: 60/16*1rem
+		text-transform: uppercase
+		margin-bottom: 20px
+		&::after
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+			width: 160px
+			height: 2px
+			background: $white
+			content: ''
+
 	.breadcrumb
 		height: 40px
 		display: flex
@@ -14,21 +36,14 @@
 			position: relative
 			display: flex
 			align-items: center
-			color: #999999
-			font-size: 12px
+			color: $white
+			font-size: 1rem
 			font-weight: 400
 			&:first-child
-				width: 1rem
-				&:hover
-					a
-						&::before
 				a
 					font-size: 0px
 					&::before
-						font-size: 1rem
-						font-weight: 400
-						content: "home"
-						font-family: Material Icons
+						content: url('../img/icon/home.png')
 						transition: .3s all ease-in-out
 			& + li
 				margin-left: 20px
@@ -44,4 +59,4 @@
 				content: 'navigate_next'
 				font-size: 18/16*1rem
 				font-family: Material Icons
-				color: #999999
+				color: $white

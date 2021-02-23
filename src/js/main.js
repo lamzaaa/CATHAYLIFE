@@ -1,6 +1,16 @@
 /*==================== SHOW SCROLL TOP ====================*/
 const scrollTop = () => {
-	$(".back-to-top").on("click", function (e) {
+	let headerHeight = $("header").outerHeight();
+	let bannerHeight = $("#section-banner").outerHeight();
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > headerHeight) {
+			$("#scroll-top").addClass("show-scroll");
+		} else {
+			$("#scroll-top").removeClass("show-scroll");
+		}
+	});
+
+	$("#scroll-top").on("click", function (e) {
 		e.preventDefault();
 		$("html,body").animate({
 			scrollTop: 0,
@@ -10,16 +20,10 @@ const scrollTop = () => {
 
 /*==================== MAIN MENU MOBILE ====================*/
 const mainMenu = () => {
-	$("header .navbar")
-		.find(".btn-toggle")
-		.on("click", function () {
-			$(this).toggleClass("active");
-			$("#overlay").toggleClass("active");
-			$(this)
-				.siblings(".navbar-main")
-				.find(".navbar-nav")
-				.toggleClass("active");
-		});
+	$("header .navbar-bottom").find(".btn-toggle").on("click", function () {
+		$(this).toggleClass("active");
+		$(this).siblings(".nav-main").toggleClass("active");
+	});
 	$("#overlay").on("click", function () {
 		let $this = $(this);
 		$this.removeClass("active");
@@ -64,18 +68,42 @@ const swiperInit = () => {
 			320: {
 				slidesPerView: 1,
 				spaceBetween: 10,
+				pagination: {
+					el: ".slide-knowledge .swiper-pagination",
+					clickable: true,
+				},
 			},
 			375: {
 				slidesPerView: 2,
 				spaceBetween: 10,
+				pagination: {
+					el: ".slide-knowledge .swiper-pagination",
+					clickable: true,
+				},
 			},
 			575: {
 				slidesPerView: 3,
 				spaceBetween: 10,
+				pagination: {
+					el: ".slide-knowledge .swiper-pagination",
+					clickable: true,
+				},
 			},
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 20,
+				pagination: {
+					el: ".slide-knowledge .swiper-pagination",
+					clickable: true,
+				},
+			},
+			1025: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				pagination: {
+					el: ".slide-knowledge .swiper-pagination",
+					clickable: true,
+				},
 			},
 			1280: {
 				spaceBetween: 30,
@@ -135,7 +163,7 @@ const checkLayoutBanner = () => {
 	let heightHeader = $("header").outerHeight();
 	let mainBanner = $("#section-banner");
 	if (mainBanner.length >= 1) {
-		$("main").css("padding-top", 0);
+		$("main").css("padding-top", heightHeader);
 	} else if (pagesBanner.length >= 1) {
 		$("main").css("padding-top", heightHeader);
 	} else {
@@ -145,7 +173,7 @@ const checkLayoutBanner = () => {
 
 /*=================== MAPPING =========================*/
 const initMapping = () => {
-	$(".navbar .navbar-main .navbar-top .wrapper-list ul li").mapping({
+	$(".navbar-bottom .btn-defaul").mapping({
 		mobileWrapper: ".navbar .navbar-main .navbar-nav",
 		mobileMethod: "appendTo",
 		desktopWrapper: ".navbar .navbar-main .navbar-top .wrapper-list ul",
@@ -158,8 +186,7 @@ const initMapping = () => {
 const scrollDown = () => {
 	$(".slide-button").on("click", function (e) {
 		e.preventDefault();
-		$("html, body").animate(
-			{
+		$("html, body").animate({
 				scrollTop: $($(this).attr("href")).offset().top,
 			},
 			500,
@@ -191,12 +218,10 @@ const activeHeaderWhenScroll = () => {
 	window.addEventListener("scroll", function () {
 		if (window.pageYOffset > 0 && $(window).width() >= 992) {
 			document.querySelector("header").classList.add("header-croll-down");
-			$("header").addClass("active");
 		} else {
 			document
 				.querySelector("header")
 				.classList.remove("header-croll-down");
-			$("header").removeClass("active");
 		}
 	});
 };
@@ -299,8 +324,7 @@ const crollToDiv = () => {
 		if (this.hash !== "") {
 			event.preventDefault();
 			var hash = this.hash;
-			$("html, body").animate(
-				{
+			$("html, body").animate({
 					scrollTop: $(hash).offset().top,
 				},
 				500,
@@ -349,6 +373,11 @@ const tabs = () => {
 			});
 		}
 	});
+	if ($(window).width() < 576) {
+		$('#toggle-tool').on('click', function () {
+			$(this).siblings('.tabs').toggleClass('active')
+		})
+	}
 };
 
 /*====================FAQLIST=================*/
@@ -369,17 +398,17 @@ const faqList = () => {
 
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
-	// scrollTop();
-	// mainMenu();
+	mainMenu();
+	scrollTop();
 	swiperInit();
 	tabs();
 	faqList();
-	// initMapping();
+	initMapping();
 	// scrollDown();
 	// setBackgroundElement();
-	// activeHeaderWhenScroll();
+	activeHeaderWhenScroll();
 	// // homePopup();
-	// checkLayoutBanner();
+	checkLayoutBanner();
 	// activeCatelog();
 	// slideTab();
 	// changePlaceholder();

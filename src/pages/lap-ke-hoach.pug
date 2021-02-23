@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- var title = 'Trang chu'
+	- var bodyClass = 'homepage'
+
+block main
+	include ../components/banner/pagebanner.pug
+	include ../components/lap-ke-hoach/list.pug

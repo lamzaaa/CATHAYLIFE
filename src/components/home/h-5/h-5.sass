@@ -54,3 +54,24 @@
 			&::after
 				font-size: 0
 				display: none
+		.swiper-pagination
+			width: 100%
+			&-bullet
+				width: 10px
+				height: 10px
+				margin: 10px 5px
+				background: $white
+				border: 1px solid transparent
+				opacity: 1
+				&:focus
+					outline: none
+				&-active
+					background: $yellow
+					border: 1px solid $white
+			@media screen and ( min-width: 1025px )
+				display: none
+	@media screen and ( max-width: 1024.98px )
+		.slide-knowledge
+			.swiper-button-next,
+			.swiper-button-prev
+				display: none

@@ -1,12 +1,12 @@
 .home-benefit
 	.wrapper-benefit-list
+		flex-direction: row
+		flex-wrap: wrap
 		.col-item
 			cursor: pointer
 			position: relative
 			padding: 0 5px
 			flex: 1
-			flex-direction: row
-			flex-wrap: wrap
 
 			.img
 				position: relative
@@ -70,14 +70,52 @@
 				.img
 					&::before
 						background: #71b0e5
-			&:hover
+			@media screen and ( min-width: 992px )
+				&:hover
+					.img
+						&::after
+							opacity: 1
+							visibility: visible
+							background-color: rgba($color: $black, $alpha: .5)
+					.content
+						.desc,
+						.btn-view-more
+							opacity: 1
+							visibility: visible
+	@media screen and ( max-width: 1240.98px )
+		.wrapper-benefit-list
+			.col-item
+				.content
+					padding: 20px
+	@media screen and ( max-width: 991.98px )
+		.wrapper-benefit-list
+			.col-item
+				flex: 1 0 50%
+				padding: 0
 				.img
 					&::after
 						opacity: 1
 						visibility: visible
 						background-color: rgba($color: $black, $alpha: .5)
 				.content
+					padding: 17px
 					.desc,
 					.btn-view-more
 						opacity: 1
 						visibility: visible
+	@media screen and ( max-width: 767.98px )
+		.wrapper-benefit-list
+			.col-item
+				.content
+					.title
+						font-size: 18/16*1rem
+					.desc
+						padding: 10px 0
+						padding-top: 0
+	@media screen and ( max-width: 575.98px )
+		.wrapper-benefit-list
+			.col-item
+				flex: 1 0 100%
+				.content
+					.title
+						font-size: 1rem

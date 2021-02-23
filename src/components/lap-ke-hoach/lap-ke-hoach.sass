@@ -1,0 +1,25 @@
+.planning-page
+	padding: 80/16*1rem 0
+	.wrapper-list
+		flex-direction: row
+		flex-wrap: wrap
+		.item
+			flex: 1
+			&-img
+				a
+					+img-ratio(300/400)
+			&-content
+				padding: 20px 0
+				.desc
+					margin: 10px 0
+					margin-bottom: 20px
+					padding-right: 50px
+					line-height: 22px
+			&:nth-child(2)
+				padding: 0 15px
+	@media screen and ( max-width: 1024.98px )
+		padding: 35/16*1rem 0
+	@media screen and ( max-width: 575.98px )
+		.wrapper-list
+			.item
+				flex: 1 0 100%

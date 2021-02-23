@@ -1,0 +1,177 @@
+.planning-catelog
+	width: 100%
+	padding-top: 0
+	.wrapper-catelog
+		width: 100%
+		margin-bottom: 41px
+		.nav
+			width: fit-content
+			margin: 0 auto
+			&-item
+				min-width: 180px
+				height: 50px
+				background: #f3f3f3
+				position: relative
+				transition: all .5s
+				display: flex
+				align-items: center
+
+				.nav-link
+					font-size: 14/16*1rem
+					font-weight: 700
+					line-height: 36px
+					padding: 7px 50px
+					text-transform: uppercase
+					transition: all .5s
+				&::after
+					transition: all .5s
+					position: absolute
+					content: url('../img/icon/down.png')
+					top: 85%
+					left: 50%
+					transform: translateX(-50%)
+					display: flex
+					opacity: 0
+					visibility: hidden
+				&.active,
+				&:hover
+					background: $main
+					.nav-link
+						color: $white
+					&::after
+						opacity: 1
+						visibility: visible
+	.wrapper-title
+		.icon
+			width: 75px
+			height: 75px
+			background: #f8f8f8
+			border: solid 1px #e1e1e1
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-right: 30px
+		.section-title
+			padding-bottom: 0
+			line-height: 36px
+			font-size: 30/16*1rem
+		.socail
+			li
+				width: 45px
+				height: 45px
+				border-radius: 50%
+				background: $white
+				border: solid 1px #e1e1e1
+				display: flex
+				align-items: center
+				justify-content: center
+				color: $main
+				+ li
+					margin-left: 10px
+	.wrapper-list
+		padding-top: 9px
+		padding-bottom: 7px
+		background: #f3f3f3
+		ul
+			display: flex
+			align-items: center
+			justify-content: center
+			max-width: 600px
+			margin: 0 auto
+			li
+				margin-left: auto
+				&.active
+					a
+						color: $main
+						font-weight: 700
+.planning-family
+	.planning-title
+		margin-bottom: 36px
+	.item
+		position: relative
+		background: $white
+		box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
+		height: 210px
+		&-img
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 78.75px
+			height: 78.75px
+			border-radius: 50%
+			background: $main
+			display: flex
+			align-items: center
+			justify-content: center
+			&::after
+				position: absolute
+				width: 94.25px
+				height: 94.25px
+				border-radius: 50%
+				background: rgba($color: $main, $alpha: .3)
+				content: ''
+				z-index: -1
+		&-content
+			padding: 30px
+			padding-top: 76px
+			.title
+				text-align: center
+				padding-bottom: 7px
+			.desc
+				text-align: center
+				span
+					color: $main
+.planning-reson
+	.reson-item
+		background: $white
+		box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
+		.img
+			+img-ratio(450/735)
+		.content
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
+			padding: 0 78px
+			.title
+				position: relative
+				padding-bottom: 24px
+				padding-top: 30px
+				&::before
+					position: absolute
+					top: 0
+					left: 0
+					width: 50px
+					height: 2px
+					background: $main
+					content: ''
+		&:last-child
+			margin-top: 40px
+			.col-lg-7
+				order: 2
+.planning-risk
+	.wrapper-select
+		display: flex
+		align-items: center
+		justify-content: center
+		background: $white
+		box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
+		height: 80px
+		.select
+			label
+				font-size: 14/16*1rem
+				font-weight: 700
+				line-height: 36px
+				text-transform: uppercase
+				padding-right: 20px
+			select
+				width: 175px
+				height: 40px
+				border-radius: 20px
+				background: $white
+				border: solid 1px #f0f0f0
+				color: $main
+				padding-left: 15px
+			&:last-child
+				margin-left: 70px

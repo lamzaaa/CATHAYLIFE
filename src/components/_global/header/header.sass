@@ -4,9 +4,11 @@ header
 	width: 100%
 	z-index: 1000
 	background: $white
+	transition: all .5s
 	.navbar-top
 		background: #f0f0f0
 		padding: 4.5px 0
+		transition: all .5s
 		.list-top
 			.nav-item
 				&:first-child
@@ -81,11 +83,14 @@ header
 				height: 55px
 				transform: translateY(-50%)
 				background: #f1f1f1
-
-		.navbar-nav
-			.nav-item
-				.nav-link
-					padding: 1rem
+		.nav-main
+			.navbar-nav
+				.nav-item
+					.nav-link
+						padding: 1rem
+					&.active
+						.nav-link
+							color: $main
 		.btn
 			margin-left: 15px
 			&-yellow
@@ -98,3 +103,79 @@ header
 				&:hover
 					background: $yellow
 					color: $text
+	&.header-croll-down
+		height: 80px
+		.navbar-top
+			height: 0
+			opacity: 0
+			visibility: hidden
+			padding: 0
+	@media screen and ( max-width: 1199.98px )
+		.navbar-bottom
+			.nav-main
+				.navbar-nav
+					.nav-item
+						.nav-link
+							padding: 1rem .5rem
+			.btn
+				margin-left: 10px
+				&-defaul
+					padding: 8px
+					font-size: 14/16*1rem
+	@media screen and ( max-width: 991.98px )
+		.navbar-bottom
+			position: relative
+			.header-title
+				margin-right: auto
+			.nav-main
+				position: absolute
+				top: 100%
+				right: 0
+				width: 100vw
+				height: calc( 100vh - 119px )
+				opacity: 0
+				visibility: hidden
+				transition: all 1s cubic-bezier(.22, .44, 0, 1)
+				background: rgba($color: $black, $alpha: .75)
+				.navbar-nav
+					height: 100%
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					.nav-item
+						padding-bottom: 15px
+						.nav-link
+							font-size: 30/16*1rem
+							color: $white
+							padding: 1rem
+				&.active
+					opacity: 1
+					visibility: visible
+	@media screen and ( max-width: 767.98px )
+		.navbar-bottom
+			.navbar-brand
+				margin-right: 10px
+			.header-title
+				font-size: 13/16*1rem
+				padding-right: 10px
+			.btn
+				margin-left: 8px
+	@media screen and ( max-width: 575.98px )
+		.navbar-top
+			.list-top
+				margin: 0
+				.nav-item
+					&:first-child
+						padding: 0
+						&::before,
+						&::after
+							display: none
+		.navbar-bottom
+			.header-title
+				display: none
+			.navbar-brand
+				display: none
+			.nav-main
+				height: calc( 100vh - 98px )
+			.btn
+				margin-left: auto
