@@ -1,0 +1,32 @@
+section.section.event-big
+	.container 
+		.section-title.text-center Sự kiện đang diễn ra
+		.item 
+			.item-img 
+				a(href="")
+					img.lazyload(data-src="./img/su-kien/big.png", alt="")
+			.item-content 
+				time 05.12.2020
+				.title.f-24 
+					a.lcl.lcl-2(href="") Đi bộ có thưởng – Đi bộ thật vui
+				.descf-14.lcl.lcl-2 Nhiều thời hạn hợp đồng thích hợp với nhiều kế hoạch tiết kiệm Quyền lợi đáo hạn hấp dẫn với lãi suất cao giúp khách hàng có một kế hoạch tiết kiệm hiệu quả. Nhiều thời hạn hợp đồng thích hợp với nhiều kế hoạch tiết kiệm Quyền lợi đáo hạn hấp dẫn với lãi suất cao giúp khách hàng có một kế hoạch tiết kiệm hiệu quả.
+section.section.event-small 
+	.container 
+		.section-title.text-center Sự kiện 
+		.row 
+			-for(i=1; i<5; i++)
+				.col-lg-4.col-md-4.col-sm-6
+					.item 
+						.item-img
+							a(href="cau-chuyen-bao-hiem-chi-tiet.html")
+								img.lazyload(data-src="./img/su-kien/small-"+i+".png", alt="")
+						.item-content 
+							time 05.12.2020
+							.title.f-24 
+								a.lcl.lcl-2(href="cau-chuyen-bao-hiem-chi-tiet.html") Cathay Life Việt Nam ra mắt cổng thanh toán trực tuyến
+
+						.view-more
+							a(href="cau-chuyen-bao-hiem-chi-tiet.html") Xem thêm
+			.button
+				a.btn.btn-readmore(href="") Xem thêm
+					em.material-icons expand_more

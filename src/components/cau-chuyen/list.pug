@@ -1,0 +1,47 @@
+section.section.story-page
+	.container 
+		.section-title.text-center Video 
+		.row 
+			-for(i=1; i<5; i++)
+				.col-md-3.col-lg-3
+					.item.zoom-img
+						.item-img
+							a(href="")
+								img.lazyload(data-src="./img/cau-chuyen/i-"+i+".png", alt="")
+							.video-play
+								a(href="https://www.youtube.com/watch?v=INinjCg50v8" data-fancybox="Video")
+									img(src="./img/icon/video.png", alt="")
+						.item-content 
+							time 05.12.2020
+							.title 
+								a.lcl.lcl-2(href="") Nắm rõ các hình thức đóng phí và thời gian đóng phí
+			a.btn.btn-readmore(href="kien-thuc-bao-hiem.html") Xem thêm
+				em.material-icons expand_more
+section.section.story-post
+	.container 
+		.section-title.text-center Bài viết 
+		.row 
+			.col-lg-6.col-md-6 
+				.item
+					.item-img
+						a(href="cau-chuyen-bao-hiem-chi-tiet.html")
+							img.lazyload(data-src="./img/cau-chuyen/i-5.png", alt="")
+					.item-content 
+						time 05.12.2020
+						.title.f-24 
+							a.lcl.lcl-2(href="cau-chuyen-bao-hiem-chi-tiet.html") Nắm rõ các hình thức đóng phí và thời gian đóng phí
+					.view-more
+						a(href="cau-chuyen-bao-hiem-chi-tiet.html") Xem thêm
+			.col-lg-6.col-md-6 
+				.item
+					.item-img
+						a(href="")
+							img.lazyload(data-src="./img/cau-chuyen/i-6.png", alt="")
+					.item-content 
+						time 05.12.2020
+						.title.f-24 
+							a.lcl.lcl-2(href="") Điền tờ khai thông tin một cách chính xác và trung thực
+					.view-more
+						a(href="") Xem thêm
+			a.btn.btn-readmore(href="kien-thuc-bao-hiem.html") Xem thêm
+				em.material-icons expand_more

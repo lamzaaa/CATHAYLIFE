@@ -1,0 +1,119 @@
+section.section.advisory-page 
+	#catelog 
+		ul 
+			li 
+				a(href="tu-van-vien.html") đăng ký tư vấn viến
+			li.active 
+				a(href="dang-ky-tu-van.html") đăng ký nhanh
+	.container 
+		.advisory-desc 
+			.row 
+				.col-lg-8
+					.img
+						video(playsinline='1' controls='3' poster='./img/tu-van/i-1.png')
+							source(src='./img/gioi-thieu.mp4' type='video/mp4')
+				.col-lg-4
+					.content 
+						.section-title Video
+						.desc.f-24 An tâm chăm sóc bản thân và gia đình với các kế hoạch bảo vệ tài chính toàn diện trước những rủi ro tai nạn, bệnh hiểm nghèo …
+		.wrapper-set 
+			.row 
+				.col-lg-6.col-md-6 
+					.set-item.d-flex.align-center
+						.munber.f-30.color-white.fw-800 01
+						.title.fw-500 Điền thông tin của bạn
+				.col-lg-6.col-md-6
+					.set-item.d-flex.align-center
+						.munber.f-30.color-white.fw-800 02
+						.title.fw-500 Nhân viên của Cathay Life sẽ gọi lại cho bạn để xác nhận cuộc hẹn
+		.wrapper-form 
+			#frm-appointment
+				.row 
+					.col-lg-4 
+						.col-form 
+							.form-group 
+								label họ và tên
+									span *
+								input(type="text" name="" placeholder="Vui lòng điền")
+							.form-group 
+								label giới tính
+									span *
+								ul 
+									li
+										input#nam(type="radio" name="gender" checked)
+										label(for="nam") Nam
+									li
+										input#nu(type="radio" name="gender")
+										label(for="nu") Nữ
+							.form-group 
+								label ngày, tháng, năm sinh
+									span *
+								.frm-iput
+									input(placeholder="Vui lòng chọn" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date")
+									.icon 
+										em.material-icons event
+							.form-group 
+								label mã giới thiệu
+								input(type="text" name="" placeholder="Vui lòng điền mã giới thiệu nếu có")
+					.col-lg-4 
+						.col-form 
+							.form-group.frm-select 
+								label khu vực sinh sống
+									span *
+								ul 
+									li 
+										input(type="text" name="" placeholder="Vui lòng điền")
+									li
+										select(name="") 
+											option(value="Tỉnh/thành") Tỉnh/thành
+											option(value="Tỉnh/thành") Hà Nội
+									li
+										select(name="") 
+											option(value="Quận/Huyện") Quận/Huyện
+							.form-group 
+								label số điện thoại
+									span *
+								input(type="text" name="" placeholder="Vui lòng điền")
+							.form-group 
+								label email
+									span *
+								input(type="text" name="" placeholder="Vui lòng điền")
+					.col-lg-4 
+						.col-form.col-contact
+							.form-group 
+								label nhu cầu
+								select(name="") 
+									option(value="Vui lòng chọn") Vui lòng chọn
+							.form-group.frm-contact 
+								label Giờ thuận tiện liên lạc 1
+									span *
+								ul 
+									li
+										.frm-iput
+											input(placeholder="Ngày tháng" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date")
+											.icon 
+												em.material-icons event
+									li
+										select(name="") 
+											option(value="Khung giờ") Khung giờ
+							.form-group.frm-contact 
+								label Giờ thuận tiện liên lạc 2
+								ul 
+									li
+										.frm-iput
+											input(placeholder="Ngày tháng" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date")
+											.icon 
+												em.material-icons event
+									li
+										select(name="") 
+											option(value="Khung giờ") Khung giờ
+					
+					.bottom-wrapper.d-flex.align-center
+						.note 
+							span (*) 
+							|Bắt buộc điền
+						.checkbox 
+							input#check(type="checkbox" checked)
+							label(for="check") Tôi đã đọc và đồng ý với thông tin bảo mật của Cathay Life
+						button.btn.btn-send GỬI
+

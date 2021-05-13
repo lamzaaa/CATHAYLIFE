@@ -1,0 +1,98 @@
+section.section.advisory-page 
+	#catelog 
+		ul 
+			li.active 
+				a(href="tu-van-vien.html") đăng ký tư vấn viến
+			li
+				a(href="dang-ky-tu-van.html") đăng ký nhanh
+	.container 
+		.section-title.text-center Danh sách tư vấn viên 
+		.wrap-filter 
+			form#form-filter(action="") 
+				.form-group 
+					label(for="") chọn tỉnh thành 
+					select(name="") 
+						option(value="0") Tp Hồ Chí Minh 
+						option(value="0") Hà Nội 
+						option(value="0") Đà Nẵng
+				.form-group 
+					label(for="") chọn lĩnh vực chuyên môn
+					select(name="") 
+						option(value="0") Nữ
+						option(value="0") Nam
+				.form-group 
+					input(type="text")
+					button(type="submit") 
+						em.material-icons search
+		.wrap-slide-human 
+			.swiper-container 
+				.swiper-wrapper 
+					-for(i=1; i<9; i++)
+						.swiper-slide 
+							.swiper-inner 
+								.img 
+									a(href="tu-van-chi-tiet.html") 
+										img.lazyload(data-src="./img/tu-van-vien/i-"+i+".png", alt="")
+									.wrap-button
+										a.btn.btn-booking(data-fancybox data-src="#popup-form" href="javascript:;") 
+											span.material-icons event
+											span Đặt lịch hẹn
+										a.btn.btn-detail(href="tu-van-chi-tiet.html") 
+											span.material-icons person_pin
+											span Xem chi tiết
+								.content 
+									a(href="") Nguyễn ngọc vy
+									.desc.lcl.lcl-3 Là Chuyên viên Tư vấn tại Cathay Life, nơi Ngọc Vy xử lý hồ sơ bảo hiểm đầy đủ quyền lợi từ đầu đến cuối, và ...
+			.swiper-button-next
+			.swiper-button-prev
+			.swiper-pagination
+		.advisory-desc 
+			.row 
+				.col-lg-8
+					.img 
+						video(playsinline='1' controls='3' poster='./img/tu-van/i-1.png')
+							source(src='./img/gioi-thieu.mp4' type='video/mp4')
+				.col-lg-4
+					.content 
+						.section-title Video
+						.desc.f-24 An tâm chăm sóc bản thân và gia đình với các kế hoạch bảo vệ tài chính toàn diện trước những rủi ro tai nạn, bệnh hiểm nghèo …
+		.wrapper-set 
+			.row 
+				.col-lg-4.col-md-6 
+					.set-item.d-flex.align-center
+						.munber.f-30.color-white.fw-800 01
+						.title.fw-500 Chọn tư vấn viên yêu thích
+				.col-lg-4.col-md-6
+					.set-item.d-flex.align-center
+						.munber.f-30.color-white.fw-800 02
+						.title.fw-500 Điền thông tin của bạn
+				.col-lg-4.col-md-6
+					.set-item.d-flex.align-center
+						.munber.f-30.color-white.fw-800 03
+						.title.fw-500 Tvv Cathay sẽ gọi lại để xác nhận cuộc hẹn với bạn
+section.section.story
+	.container 
+		.section-title.text-center Câu chuyện bảo hiểm 
+		.wrap-story-slide 
+			.swiper-container 
+				.swiper-wrapper 
+					-for(i=1; i<5; i++)
+						.swiper-slide 
+							.swiper-inner
+								.img
+									a(href="")
+										img.lazyload(data-src="./img/cau-chuyen/i-"+i+".png", alt="")
+									.video-play
+										a(href="https://www.youtube.com/watch?v=INinjCg50v8" data-fancybox="Video")
+											img(src="./img/icon/video.png", alt="")
+								.content 
+									time 05.12.2020
+									.title 
+										a.lcl.lcl-2(href="") Nắm rõ các hình thức đóng phí và thời gian đóng phí
+			.swiper-button-next
+			.swiper-button-prev
+			.swiper-pagination
+
+
+
+

@@ -1,0 +1,105 @@
+.advisory-page
+	padding-top: 0
+	background: #f8f8f8
+	#catelog
+		width: 100%
+		border-top: solid 1px $white
+		ul
+			display: flex
+			align-items: center
+			justify-content: center
+			li
+				width: 180px
+				height: 50px
+				background: #f3f3f3
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: all .5s
+				a
+					color: #666666
+					font-size: 14/16*1rem
+					font-weight: 700
+					text-transform: uppercase
+					padding: 1rem
+				&.active,
+				&:hover
+					background: $main
+					a
+						color: $white
+				&.active
+					position: relative
+					&::after
+						position: absolute
+						top: 100%
+						left: 50%
+						content: url('../img/icon/down.png')
+						transform: translateX(-50%)
+						font-size: 0
+				&:first-child
+					display: none
+
+	.advisory-desc
+		margin-top: 40px
+		background: $white
+		border-radius: 20px
+		box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
+		margin-bottom: 30px
+		.img
+			position: relative
+			border-radius: 20px
+			+img-ratio(435/810)
+			.icon
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 49px
+				height: 35px
+				transform: translate(-50%, -50%)
+		.content
+			padding-left: 30px
+			padding-top: 55px
+			padding-right: 45px
+			.desc
+				line-height: 32px
+		@media screen and ( max-width: 991.98px )
+			.content
+				padding: 20px
+				.section-title
+					padding-top: 0
+					padding-bottom: 0
+				.desc
+					font-size: 1rem
+	.wrapper-set
+		margin-bottom: 30px
+		.set-item
+			background: $white
+			border-radius: 10px
+			.munber
+				min-width: 70px
+				height: 70px
+				border-radius: 10px 0px 0px 10px
+				background: $main
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-right: 20px
+		@media screen and ( max-width: 767.98px )
+			margin-bottom: 0
+			.set-item
+				margin-bottom: 30px
+
+	@media screen and ( max-width: 991.98px )
+		.wrapper-content
+			margin-bottom: 30px
+			.content
+				.title
+					margin-top: 7px
+				.desc
+					margin-top: 7px
+		.bottom-wrapper
+			flex-direction: column-reverse
+			.checkbox
+				margin-left: 0
+				margin-top: 5px
+				margin-bottom: 5px

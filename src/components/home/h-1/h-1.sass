@@ -1,11 +1,9 @@
 .home-benefit
 	.wrapper-benefit-list
-		flex-direction: row
-		flex-wrap: wrap
+		position: relative
 		.col-item
 			cursor: pointer
 			position: relative
-			padding: 0 5px
 			flex: 1
 
 			.img
@@ -51,25 +49,6 @@
 					opacity: 0
 					visibility: hidden
 					transition: all 1s cubic-bezier(.22, .44, 0, 1)
-
-			&:first-child
-				padding-left: 0
-				.img
-					&::before
-						background: #00994e
-			&:nth-child(2)
-				.img
-					&::before
-						background: #71bf44
-			&:nth-child(3)
-				.img
-					&::before
-						background: #ffd800
-			&:last-child
-				padding-right: 0
-				.img
-					&::before
-						background: #71b0e5
 			@media screen and ( min-width: 992px )
 				&:hover
 					.img
@@ -82,6 +61,46 @@
 						.btn-view-more
 							opacity: 1
 							visibility: visible
+		.swiper-slide
+			&:first-child
+				.col-item
+					.img
+						&::before
+							background: #00994e
+			&:nth-child(2)
+				.col-item
+					.img
+						&::before
+							background: #71bf44
+			&:nth-child(3)
+				.col-item
+					.img
+						&::before
+							background: #ffd800
+			&:last-child
+				.col-item
+					.img
+						&::before
+							background: #71b0e5
+		.swiper-button-next
+			right: 0 !important
+			&::after
+				content: '\e876' !important
+		.swiper-button-prev
+			left: 0 !important
+			&::after
+				content: '\e875' !important
+		.swiper-button-next,
+		.swiper-button-prev
+			background: none
+			&::before
+				display: none
+			&::after
+				color: $white
+				font-family: Linearicons-Free !important
+				font-size: r(36px)
+			@media screen and ( min-width: 992px )
+				display: none
 	@media screen and ( max-width: 1240.98px )
 		.wrapper-benefit-list
 			.col-item
@@ -99,6 +118,9 @@
 						background-color: rgba($color: $black, $alpha: .5)
 				.content
 					padding: 17px
+					display: flex
+					flex-direction: column
+					justify-content: flex-end
 					.desc,
 					.btn-view-more
 						opacity: 1

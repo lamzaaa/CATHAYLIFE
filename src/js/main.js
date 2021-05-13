@@ -20,10 +20,12 @@ const scrollTop = () => {
 
 /*==================== MAIN MENU MOBILE ====================*/
 const mainMenu = () => {
-	$("header .navbar-bottom").find(".btn-toggle").on("click", function () {
-		$(this).toggleClass("active");
-		$(this).siblings(".nav-main").toggleClass("active");
-	});
+	$("header .navbar-bottom")
+		.find(".btn-toggle")
+		.on("click", function () {
+			$(this).toggleClass("active");
+			$(this).siblings(".nav-main").toggleClass("active");
+		});
 	$("#overlay").on("click", function () {
 		let $this = $(this);
 		$this.removeClass("active");
@@ -35,16 +37,20 @@ const mainMenu = () => {
 		.on("click", function () {
 			$(this).siblings(".form-group").toggleClass("active");
 		});
+	$(".btn-sub ").on("click", function () {
+		$(this).toggleClass("active");
+		$(this).parent().next().slideToggle();
+	});
 };
 
 /*==========LISTBANNER SLIDER==========*/
 const swiperInit = () => {
 	let myswiper = new Swiper(".home-banner .swiper-container", {
 		loop: false,
-		speed: 2000,
+		speed: 3500,
 		effect: "fade",
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 			disableOnInteraction: false,
 		},
 		fadeEffect: {
@@ -53,6 +59,80 @@ const swiperInit = () => {
 		pagination: {
 			el: ".home-banner .swiper-pagination",
 			clickable: true,
+		},
+	});
+	let benefit = new Swiper(".wrapper-benefit-list .swiper-container", {
+		speed: 300,
+		loop: false,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl:
+				".wrapper-benefit-list .swiper-container .swiper-button-next",
+			prevEl:
+				".wrapper-benefit-list .swiper-container .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			376: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			576: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			1025: {
+				slidesPerView: 4,
+				spaceBetween: 10,
+			},
+			1280: {
+				spaceBetween: 10,
+				slidesPerView: 4,
+			},
+		},
+	});
+	let planning = new Swiper(".wrapper-planning .swiper-container", {
+		speed: 300,
+		loop: false,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".wrapper-planning .swiper-container .swiper-button-next",
+			prevEl: ".wrapper-planning .swiper-container .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			376: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
+			1025: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 3,
+			},
 		},
 	});
 	let fieldSlide = new Swiper(".slide-knowledge .swiper-container", {
@@ -68,42 +148,22 @@ const swiperInit = () => {
 			320: {
 				slidesPerView: 1,
 				spaceBetween: 10,
-				pagination: {
-					el: ".slide-knowledge .swiper-pagination",
-					clickable: true,
-				},
 			},
 			375: {
 				slidesPerView: 2,
 				spaceBetween: 10,
-				pagination: {
-					el: ".slide-knowledge .swiper-pagination",
-					clickable: true,
-				},
 			},
 			575: {
 				slidesPerView: 3,
 				spaceBetween: 10,
-				pagination: {
-					el: ".slide-knowledge .swiper-pagination",
-					clickable: true,
-				},
 			},
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 20,
-				pagination: {
-					el: ".slide-knowledge .swiper-pagination",
-					clickable: true,
-				},
 			},
 			1025: {
 				slidesPerView: 3,
 				spaceBetween: 20,
-				pagination: {
-					el: ".slide-knowledge .swiper-pagination",
-					clickable: true,
-				},
 			},
 			1280: {
 				spaceBetween: 30,
@@ -155,19 +215,133 @@ const swiperInit = () => {
 			},
 		},
 	});
+	let slideColumn = new Swiper(".wrap-slide-human .swiper-container", {
+		speed: 800,
+		slidesPerView: 4,
+		slidesPerColumn: 2,
+		slidesPerColumnFill: "row",
+		slidesPerGroup: 8,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".wrap-slide-human .swiper-button-next",
+			prevEl: ".wrap-slide-human .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+				slidesPerColumn: 1,
+				slidesPerGroup: 1,
+				pagination: {
+					el: ".wrap-slide-human .swiper-pagination",
+					clickable: true,
+				},
+			},
+			375: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+				slidesPerColumn: 1,
+				slidesPerGroup: 1,
+				pagination: {
+					el: ".wrap-slide-human .swiper-pagination",
+					clickable: true,
+				},
+			},
+			575: {
+				slidesPerView: 3,
+				pagination: {
+					el: ".wrap-slide-human .swiper-pagination",
+					clickable: true,
+				},
+			},
+			991: {
+				slidesPerView: 3,
+				pagination: {
+					el: ".wrap-slide-human .swiper-pagination",
+					clickable: true,
+				},
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+	let slideStory = new Swiper(".wrap-story-slide .swiper-container", {
+		speed: 300,
+		loop: true,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".wrap-story-slide .swiper-button-next",
+			prevEl: ".wrap-story-slide .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: ".wrap-story-slide .swiper-pagination",
+					clickable: true,
+				},
+			},
+			375: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+				pagination: {
+					el: ".wrap-story-slide .swiper-pagination",
+					clickable: true,
+				},
+			},
+			575: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".wrap-story-slide .swiper-pagination",
+					clickable: true,
+				},
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				pagination: {
+					el: ".wrap-story-slide .swiper-pagination",
+					clickable: true,
+				},
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				pagination: {
+					el: ".wrap-story-slide .swiper-pagination",
+					clickable: true,
+				},
+			},
+			1025: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				pagination: {
+					el: ".wrap-story-slide .swiper-pagination",
+					clickable: true,
+				},
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 4,
+			},
+		},
+	});
 };
 
 // ===========================CHECK BANNER========================= //
 const checkLayoutBanner = () => {
-	let pagesBanner = $("#pagebanner");
 	let heightHeader = $("header").outerHeight();
 	let mainBanner = $("#section-banner");
-	if (mainBanner.length >= 1) {
-		$("main").css("padding-top", heightHeader);
-	} else if (pagesBanner.length >= 1) {
+	if (mainBanner.length == 0) {
 		$("main").css("padding-top", heightHeader);
 	} else {
-		$("main").css("padding-top", heightHeader);
+		$("main").css("padding-top", 0);
 	}
 };
 
@@ -186,7 +360,8 @@ const initMapping = () => {
 const scrollDown = () => {
 	$(".slide-button").on("click", function (e) {
 		e.preventDefault();
-		$("html, body").animate({
+		$("html, body").animate(
+			{
 				scrollTop: $($(this).attr("href")).offset().top,
 			},
 			500,
@@ -319,42 +494,21 @@ const toggleNav = () => {
 
 /*==================== SCROLL SECTION ===================*/
 const crollToDiv = () => {
-	$("#catelogry ul li a").on("click", function (event) {
+	$(".wrapper-list ul li a").on("click", function () {
 		$(this).parent("li").addClass("active");
 		if (this.hash !== "") {
-			event.preventDefault();
 			var hash = this.hash;
-			$("html, body").animate({
+			$("html, body").animate(
+				{
 					scrollTop: $(hash).offset().top,
 				},
-				500,
 				function () {
 					window.location.hash = hash;
 				}
 			);
 		}
-		$("#categroly ul li a").not(this).parent("li").removeClass("active");
-		window.addEventListener("scroll", function () {
-			var bannerheight = $("#pagebanner").outerHeight();
-			if (window.pageYOffset > bannerheight) {
-				$("#catelogry").addClass("scolled");
-			} else {
-				$("#catelogry").removeClass("scolled");
-			}
-		});
+		$(".wrapper-list ul li a").not(this).parent("li").removeClass("active");
 	});
-	if ($("#catelogry").length >= 1) {
-		window.addEventListener("scroll", function () {
-			var bannerheight = $("#pagebanner").outerHeight();
-			var heightHeader = $("header").outerHeight();
-			if (window.pageYOffset > bannerheight) {
-				$("#catelogry").addClass("scolled");
-				$(".scolled").css("top", heightHeader);
-			} else {
-				$("#catelogry").removeClass("scolled");
-			}
-		});
-	}
 };
 
 /*================TABSPANEL======================*/
@@ -374,26 +528,24 @@ const tabs = () => {
 		}
 	});
 	if ($(window).width() < 576) {
-		$('#toggle-tool').on('click', function () {
-			$(this).siblings('.tabs').toggleClass('active')
-		})
+		$("#toggle-tool").on("click", function () {
+			$(this).siblings(".tabs").toggleClass("active");
+		});
 	}
 };
 
 /*====================FAQLIST=================*/
 const faqList = () => {
-	$("#faq-list")
-		.find(".title")
-		.on("click", function () {
-			$(this).parent().toggleClass("active");
-			$(this).siblings(".desc").slideToggle();
-			$("#faq-list").find(".title").not(this).siblings(".desc").slideUp();
-			$("#faq-list")
-				.find(".title")
-				.not(this)
-				.parent()
-				.removeClass("active");
-		});
+	$("#faq-list .title").on("click", function () {
+		$(this).parent().toggleClass("active");
+		$(this).next(".desc").slideToggle();
+		$("#faq-list .title").not(this).siblings(".desc").slideUp();
+		$("#faq-list .title").not(this).parent().removeClass("active");
+	});
+	$(".note-box .title").on("click", function () {
+		$(this).toggleClass("active");
+		$(this).siblings(".desc").slideToggle();
+	});
 };
 
 /*==================== LOAD FUNCTION ====================*/
@@ -414,7 +566,7 @@ $(document).ready(function () {
 	// changePlaceholder();
 	// phantrang();
 	// toggleNav();
-	// crollToDiv();
+	crollToDiv();
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
 	var i;

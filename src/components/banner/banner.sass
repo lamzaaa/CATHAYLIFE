@@ -18,11 +18,28 @@
 				width: 100%
 				z-index: 2
 				.title
-					font-size: 36/16*1rem
+					font-size: r(48px)
+					font-weight: 700
 					transition: all 3s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s
 					transform: translate3d(20%, 0, 0)
 					opacity: 0
 					display: inline-block
+					color: $white
+			&::after
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: rgba($color: $black, $alpha: .2)
+				content: ''
+			&.desktop
+				@media screen and ( max-width: 575.98px )
+					display: none
+			&.mobile
+				height: 50vh
+				@media screen and ( min-width: 578px )
+					display: none
 		.swiper-slide
 			&-active
 				.slide-inner
@@ -30,6 +47,7 @@
 						.title
 							transform: translate3d(0, 0, 0)
 							opacity: 1
+
 			.slide-button
 				position: absolute
 				bottom: 42px
@@ -53,20 +71,23 @@
 				&-active
 					background: $yellow
 					border: 1px solid $white
+		@media screen and ( max-width: 1600px )
+			.slide-inner
+				height: auto
 		@media screen and ( max-width: 991.98px )
 			.slide-inner
+				height: auto
 				.content
 					.title
 						max-width: 100%
 						font-size: 30/16*1rem
 		@media screen and ( max-width: 575.98px )
 			.slide-inner
-				height: 30vh
 				.content
 					.title
 						bottom: 50px
 						width: 100%
-						font-size: 20/16*1rem
+						font-size: r(25px)
 						padding: 0 10px
 			.swiper-slide
 				.slide-button
@@ -75,15 +96,125 @@
 	position: relative
 	.img
 		width: 100%
-		height: 600px
+		height: 480px
 		img
 			width: 100%
 			height: 100%
 			object-fit: cover
 			object-position: bottom
+	.breadcrumb-wrapper
+		position: absolute
+		width: 100%
+		left: 50%
+		bottom: 56px
+		transform: translateX(-50%)
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		border: none
+		.breadcrumb-title
+			position: relative
+			color: $white
+			font-weight: 700
+			font-size: 60/16*1rem
+			text-transform: uppercase
+			margin-bottom: 20px
+			&::after
+				position: absolute
+				top: 100%
+				left: 50%
+				transform: translateX(-50%)
+				width: 160px
+				height: 2px
+				background: $white
+				content: ''
+
+		.breadcrumb
+			height: 40px
+			display: flex
+			align-items: center
+			background-color: transparent
+			flex-wrap: wrap
+			list-style: none
+			margin-bottom: 0
+			padding: 0px
+			li
+				position: relative
+				display: flex
+				align-items: center
+				color: $white
+				font-size: 14/16*1rem
+				font-weight: 400
+				&:first-child
+					a
+						font-size: 0px
+						&::before
+							content: url('../img/icon/home.png')
+							transition: .3s all ease-in-out
+				& + li
+					margin-left: 20px
+				&.active
+				&:hover
+
+			li+li 
+				&::before
+					position: absolute
+					top: 50%
+					left: -20px
+					transform: translateY(-50%)
+					content: 'navigate_next'
+					font-size: 18/16*1rem
+					font-family: Material Icons
+					color: $white
+		@media screen and ( max-width: 1199.98px )
+			.breadcrumb-title
+				font-size: 50/16*1rem
+		@media screen and ( max-width: 575.98px )
+			bottom: 30px
+			.breadcrumb-title
+				font-size: 30/16*1rem
+
+	&.none-img
+		width: 100%
+		height: 300px
+		background: #e7efe3
+		.breadcrumb-wrapper
+			.breadcrumb-title
+				color: $text
+				&::after
+					background: $text
+			.breadcrumb
+				li
+					color: #b5b8b4
+					&:first-child
+						a
+							&::before
+								content: url('../img/icon/home-1.png')
+				li+li 
+					&::before
+						color: #b5b8b4
+
 	@media screen and ( max-width: 991.98px )
 		.img
-			height: 345px
-	@media screen and ( max-width: 575.98px )
-		.img
-			height: auto
+			height: 50vh
+// .story,
+// .knowledge,
+// .event
+// 	@media screen and ( max-width: 575.98px )
+// 		#pagebanner
+// 			.breadcrumb-wrapper
+// 				.breadcrumb-title
+// 					color: $text
+// 					&::after
+// 						background: $text
+// 				.breadcrumb
+// 					li
+// 						color: #b5b8b4
+// 						&:first-child
+// 							a
+// 								&::before
+// 									content: url('../img/icon/home-1.png')
+// 					li+li 
+// 						&::before
+// 							color: #b5b8b4

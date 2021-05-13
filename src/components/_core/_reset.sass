@@ -158,6 +158,25 @@ input, button, select, optgroup, textarea
 	font-family: inherit
 	font-size: inherit
 	line-height: inherit
+select
+	padding-right: 15px
+	-webkit-appearance: none
+	-moz-appearance: none
+	-ms-appearance: none
+	appearance: none
+	position: relative
+	background-image: url('../img/icon/expand_more.png')
+	background-repeat: no-repeat
+	background-position: 95%
+	color: $main
+	border: none
+	&::-ms-expand
+		display: none
+input[type="date"]
+	&::-webkit-calendar-picker-indicator
+		color: transparent
+		background: none
+		z-index: 1
 
 button, input
 	overflow: visible

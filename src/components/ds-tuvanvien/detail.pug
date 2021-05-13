@@ -1,0 +1,66 @@
+section.section.detail-page 
+	.container 
+		.wrap-infor
+			.infor-block 
+				.img 
+					img.lazyload(data-src="./img/tu-van-vien/i-1.png", alt="")
+				.wrap-content 
+					.title.f-24.fw-500 nguyễn ngọc vy
+					.sub-title.color-main.f-16 Chuyên viên tư vấn 
+					.content 
+						.desc 
+							p “
+							strong Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+						ul 
+							li 
+								p Kinh nghiệm: 
+									strong 2 năm
+							li 
+								p Chuyện môn: 
+									strong Tư vấn
+							li 
+								p Khu vực: 
+									strong Thành phố Hồ Chí Minh
+							li 
+								p Ngôn ngữ: 
+									strong Tiếng Việt, English
+						a.btn.btn-booking(data-fancybox data-src="#popup-form" href="javascript:;") 
+							span.material-icons event
+							span Đặt lịch hẹn
+			.sub-desc 
+				ul 
+					li 
+						p Là Chuyên viên Tư vấn tại Cathay Life, nơi Ngọc Vy xử lý hồ sơ bảo hiểm đầy đủ quyền lợi từ đầu đến cuối, và tư vấn khách hàng về các lựa chọn bảo hiểm.
+					li 
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					li 
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					li 
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+section.section.advisory-other
+	.container 
+		.section-title.text-center Tư vấn viên khác
+		.wrap-story-slide
+			.swiper-container 
+				.swiper-wrapper 
+					-for(i=1; i<5; i++)
+						.swiper-slide 
+							.swiper-inner 
+								.img
+									a(href="") 
+										img.lazyload(data-src="./img/tu-van-vien/i-"+i+".png", alt="")
+									.wrap-button
+										a.btn.btn-booking(data-fancybox data-src="#popup-form" href="javascript:;") 
+											span.material-icons event
+											span Đặt lịch hẹn
+										a.btn.btn-detail(href="tu-van-chi-tiet.html") 
+											span.material-icons person_pin
+											span Xem chi tiết
+								.content 
+									a(href="") Nguyễn ngọc vy
+									.desc.lcl.lcl-3 Là Chuyên viên Tư vấn tại Cathay Life, nơi Ngọc Vy xử lý hồ sơ bảo hiểm đầy đủ quyền lợi từ đầu đến cuối, và ...
+			.swiper-button-next 
+			.swiper-button-prev 
+			.swiper-pagination
+

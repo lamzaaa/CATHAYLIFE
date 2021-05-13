@@ -1,0 +1,43 @@
+#popup-form
+	display: none
+	border-radius: 20px
+	padding: 0 30px
+	.section-title
+		padding-bottom: 20px
+		padding-top: 40px
+	.human-infor
+		display: flex
+		align-items: center
+		padding-bottom: 20px
+		margin-bottom: 26px
+		border-bottom: solid 1px #e0e0e0
+		.img
+			width: 115px
+			height: 115px
+			margin-right: 30px
+			border-radius: 50%
+
+			img
+				width: 100%
+				height: 100%
+				border-radius: 50%
+				padding: 0
+				object-fit: cover
+	.wrapper-form
+		box-shadow: none
+		padding: 0
+		padding-bottom: 36px
+	.fancybox-close-small
+		width: 40px
+		height: 40px
+		padding: 0
+		border-radius: 0 20px 0 0
+		background: $main
+		svg
+			display: none
+		&::after
+			content: 'close'
+			font-size: 20px
+			font-family: Material Icons
+			color: $white
+			line-height: 36px

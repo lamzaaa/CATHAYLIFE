@@ -1,0 +1,217 @@
+.advisory-page
+	.section-title
+		padding-top: 20px
+	.wrap-filter
+		width: 100%
+		margin-bottom: 30px
+		#form-filter
+			width: 100%
+			padding-top: 19px
+			padding-bottom: 20px
+			padding-left: 60px
+			padding-right: 60px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background: #e7efe3
+			.form-group
+				position: relative
+				label
+					text-transform: uppercase
+					font-size: 14/16*1rem
+					line-height: 36px
+					color: $text
+					font-weight: 700
+				select
+					margin-left: 23px
+					width: 200px
+					height: 40px
+					padding: 0 15px
+					border: none
+					background: $white
+					border-radius: 20px
+					border: solid 2px #f0f0f0
+					background-image: url('../img/icon/expand_more.png')
+					background-position: 95%
+					background-repeat: no-repeat
+					box-shadow: 0 0 20px 0 rgba($color: #f0f0f0, $alpha: .18)
+				input
+					width: 308px
+					height: 40px
+					padding: 0 15px
+					background: $white
+					border-radius: 20px
+					border: solid 2px #f0f0f0
+					box-shadow: 0 0 20px 0 rgba($color: #f0f0f0, $alpha: .18)
+				button
+					position: absolute
+					top: 50%
+					right: 0
+					transform: translateY(-50%)
+					border: none
+					background: none
+					display: flex
+					color: $main
+					font-size: 24/16*1rem
+					align-items: center
+					justify-content: center
+				&:nth-child(2)
+					select
+						width: 175px
+		@media screen and ( max-width: 1279.98px )
+			#form-filter
+				align-items: flex-end
+				.form-group
+					display: flex
+					flex-direction: column
+					select
+						margin-left: 0
+		@media screen and ( max-width: 991.98px )
+			#form-filter
+				padding: 19px 20px
+				.form-group
+					flex: 1
+					select,
+					input
+						width: 100%
+					&:nth-child(2)
+						select
+							width: 100%
+		@media screen and ( max-width: 575.98px )
+			#form-filter
+				flex-direction: column
+				align-items: flex-start
+				.form-group
+					width: 100%
+					&:nth-child(2)
+						margin: 10px 0
+						margin-bottom: 20px
+	.wrap-slide-human
+		position: relative
+		.swiper-inner
+			.img
+				position: relative
+				width: 285px
+				border-bottom: solid 5px #71bf44
+				a
+					+img-ratio(360/285)
+				.wrap-button
+					position: absolute
+					bottom: 40px
+					left: 50%
+					transform: translateX(-50%)
+					a
+						padding-top: 0
+			.content
+				padding-top: 24px
+				padding-bottom: 30px
+				a
+					font-weight: 500
+					font-size: 20/16*1rem
+					color: $text
+					text-transform: uppercase
+				.desc
+					padding-top: 21px
+					line-height: 22px
+					font-size: 1rem
+		.swiper-button-next,
+		.swiper-button-prev
+			cursor: pointer
+			opacity: 1
+			background: none
+			border-radius: 0
+			&::after
+				display: none
+			&::before
+				font-family: Material Icons
+				font-size: 46/16*1rem
+				color: $main
+
+		.swiper-button-next
+			&::before
+				content: 'arrow_forward_ios'
+		.swiper-button-prev
+			&::before
+				content: 'arrow_back_ios'
+		@media screen and ( max-width: 1199.98px )
+			.swiper-inner
+				.img
+					width: 100%
+		@media screen and ( max-width: 911.98px )
+			.swiper-button-next,
+			.swiper-button-prev
+				display: none
+			.swiper-pagination
+				width: 100%
+				&-bullet
+					width: 10px
+					height: 10px
+					margin-left: 10px
+					&-active
+						background: $main
+.story
+	padding-top: 0
+	padding-bottom: 80px
+	background: #f8f8f8
+	.wrap-story-slide
+		position: relative
+		.swiper-inner
+			.img
+				position: relative
+				a
+					+img-ratio(165/285)
+				.video-play
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					a
+						width: 60px
+						height: 48px
+			.content
+				padding: 20px
+				padding-top: 10px
+				padding-bottom: 64px
+				transition: all .5s
+				background: $white
+				.title
+					padding-top: 10px
+					border-top: solid 1px #e5e5e5
+					a
+						font-weight: 400
+						transition: all .5s
+		.swiper-button-next,
+		.swiper-button-prev
+			cursor: pointer
+			opacity: 1
+			background: none
+			border-radius: 0
+			&::after
+				display: none
+			&::before
+				font-family: Material Icons
+				font-size: 24/16*1rem
+				color: $main
+
+		.swiper-button-next
+			right: -70px !important
+			&::before
+				content: 'arrow_forward_ios'
+		.swiper-button-prev
+			left: -70px !important
+			&::before
+				content: 'arrow_back_ios'
+	@media screen and ( max-width: 991.98px )
+		.wrap-story-slide
+			.swiper-button-next,
+			.swiper-button-prev
+				display: none
+			.swiper-pagination
+				width: 100%
+				margin-top: 20px
+				&-bullet
+					width: 10px
+					height: 10px
+					margin-left: 10px
+					&-active
+						background: $main

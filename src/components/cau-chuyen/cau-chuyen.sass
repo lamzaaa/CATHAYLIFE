@@ -1,0 +1,247 @@
+.story-page,
+.story-post
+	background: #fbf9e6
+	.item
+		min-height: 330px
+		height: 100%
+		margin-bottom: 30px
+		background: $white
+
+		&-img
+			position: relative
+			a
+				+img-ratio(165/285)
+			.video-play
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 60px
+				transform: translate(-50%, -50%)
+				a
+					padding: 0
+					img
+						position: static
+
+		&-content
+			padding: 20px
+			padding-top: 10px
+			transition: all .5s
+			.title
+				padding-top: 10px
+				border-top: solid 1px #e5e5e5
+				a
+					font-weight: 400
+					transition: all .5s
+
+		.view-more
+			width: 100%
+			padding: 8px 26px
+			opacity: 0
+			visibility: hidden
+			background: #f5f5f5
+			transition: all .5s
+
+			&::after
+				display: none
+			a
+				position: relative
+				padding-right: 13px
+				&::after
+					position: absolute
+					top: 50%
+					left: 100%
+					width: 20px
+					height: 2px
+					background: $white
+					content: ''
+					transform: translateY(-50%)
+	.btn-readmore
+		margin: 0 auto
+		margin-top: 30px
+.story-post
+	.item
+		min-height: unset
+		background: none
+
+		&-content
+			background: $white
+			.title
+				padding-right: 40px
+		@media screen and ( min-width: 768px )
+			&:hover
+				.item-content
+					transform: translateY(-40px)
+				.view-more
+					margin-top: -40px
+					opacity: 1
+					visibility: visible
+					a
+						color: $main
+						&::after
+							background: $main
+	@media screen and ( max-width: 767.98px )
+		.item
+			.view-more
+				opacity: 1
+				visibility: visible
+				color: $main
+				a
+					&::after
+						background: $main
+.story-detail
+	padding-bottom: 0
+	background: #fbf9e6
+	.wrapper-title
+		.created-date
+			min-width: 74px
+			height: 74px
+			border: solid 1px $white
+			background: #f8f8f8
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			.date
+				position: relative
+				font-size: 24/16*1rem
+				line-height: 24px
+				font-weight: 700
+				padding-bottom: 7px
+
+				&::after
+					position: absolute
+					top: 100%
+					left: 50%
+					transform: translateX(-50%)
+					width: 20px
+					height: 1px
+					background: $main
+					content: ''
+			.month
+				padding-top: 7px
+				font-size: 12/16*1rem
+				line-height: 24px
+		.title
+			margin-left: 30px
+		.social
+			li
+				width: 45px
+				height: 45px
+				border-radius: 50%
+				border: solid 1px #e1e1e1
+				display: flex
+				align-items: center
+				justify-content: center
+				background: $white
+				color: $main
+			li+li
+				margin-left: 10px
+	.wrapper-container
+		background: $white
+		.full-content
+			max-width: 1080px
+			margin: 0 auto
+			padding: 60px 0
+			padding-bottom: 80px
+			p
+				padding: 15px 30px
+	@media screen and ( max-width: 991.98px )
+		.wrapper-title
+			flex-direction: row
+			flex-wrap: wrap
+			.social
+				margin: 10px 0
+		.wrapper-container
+			.full-content
+				max-width: 100%
+				padding: 30px 0
+				padding-bottom: 30px
+.story-other
+	padding-top: 57px
+	background: #fbf9e6
+	.slide-knowledge
+		position: relative
+		.swiper-inner
+			.img
+				a
+					+img-ratio(165/285)
+			.content
+				background: $white
+				padding: 20px
+				transition: all .5s
+				.title
+					padding-top: 20px
+					border-top: solid 1px #e5e5e5
+					a
+						font-weight: 400
+						transition: all .5s
+			.view-more
+				width: 100%
+				padding: 8px 26px
+				opacity: 0
+				visibility: hidden
+				background: #f5f5f5
+				transition: all .5s
+
+				&::after
+					display: none
+				a
+					position: relative
+					padding-right: 13px
+					&::after
+						position: absolute
+						top: 50%
+						left: 100%
+						width: 20px
+						height: 2px
+						background: $white
+						content: ''
+						transform: translateY(-50%)
+			@media screen and ( min-width: 1025px )
+				&:hover
+					.content
+						transform: translateY(-40px)
+					.view-more
+						margin-top: -40px
+						opacity: 1
+						visibility: visible
+						a
+							color: $main
+							&::after
+								background: $main
+		@media screen and ( max-width: 1024.98px )
+			padding-bottom: 15px
+			.swiper-inner
+				.view-more
+					opacity: 1
+					visibility: visible
+					color: $main
+					a
+						&::after
+							background: $main
+		.swiper-button-next,
+		.swiper-button-prev
+			&::after
+				font-size: 0
+				display: none
+		.swiper-pagination
+			width: 100%
+			&-bullet
+				width: 10px
+				height: 10px
+				margin: 10px 5px
+				background: $white
+				border: 1px solid transparent
+				opacity: 1
+				&:focus
+					outline: none
+				&-active
+					background: $yellow
+					border: 1px solid $white
+			@media screen and ( min-width: 1025px )
+				display: none
+	@media screen and ( max-width: 1024.98px )
+		.slide-knowledge
+			.swiper-button-next,
+			.swiper-button-prev
+				display: none

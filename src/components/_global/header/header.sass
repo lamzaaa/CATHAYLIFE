@@ -5,6 +5,9 @@ header
 	z-index: 1000
 	background: $white
 	transition: all .5s
+	box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
+	@media screen and ( min-width: 1200px )
+		height: 120px
 	.navbar-top
 		background: #f0f0f0
 		padding: 4.5px 0
@@ -67,6 +70,7 @@ header
 						text-decoration: underline
 						color: $main
 	.navbar-bottom
+		position: relative
 		padding-top: 12px
 		padding-bottom: 13px
 		.navbar-brand
@@ -83,11 +87,111 @@ header
 				height: 55px
 				transform: translateY(-50%)
 				background: #f1f1f1
+		.icon-mobile
+			em
+				color: $main
+			@media screen and ( min-width: 576px )
+				display: none
 		.nav-main
 			.navbar-nav
 				.nav-item
+					display: flex
+					align-items: center
 					.nav-link
 						padding: 1rem
+					&.dropdown
+						position: static
+						.title-sub
+							display: flex
+							align-items: center
+							.btn-sub
+								display: flex
+								transition: all .5s
+								color: $white
+								font-weight: 700
+								font-size: r(20px)
+								@media screen and ( min-width: 992px )
+									display: none
+
+								&.active
+									transform: rotate(180deg)
+						.dopdown-menu
+							position: absolute
+							top: 100%
+							left: 0
+							width: 100%
+							background: $main
+							opacity: 0
+							visibility: hidden
+							transition: all .5s
+							ul
+								display: flex
+								align-items: center
+								justify-content: center
+								width: max-content
+								margin: 0 auto
+								li
+									margin-left: 32px
+									a
+										position: relative
+										color: $white
+										font-size: r(14px)
+										padding: 10px 0
+										display: block
+										&::after
+											position: absolute
+											bottom: 0
+											left: 50%
+											width: 0
+											background: $white
+											height: 1px
+											content: ''
+											transition: all .5s
+											transform: translateX(-50%)
+									&:first-child
+										margin-left: 105px
+									&:hover,
+									&.active
+										a
+											&::after
+												width: 100%
+
+							&::after
+								position: absolute
+								content: url('../img/icon/down.png')
+								transform: rotate(180deg) translateX(-50%)
+								bottom: 100%
+								left: 52%
+								font-size: 0
+						@media screen and ( min-width: 992px )
+							&:hover
+								.dopdown-menu
+									opacity: 1
+									visibility: visible
+						@media screen and ( max-width: 991.98px )
+							display: flex
+							flex-direction: column
+							.dopdown-menu
+								position: static
+								opacity: 1
+								visibility: visible
+								background: transparent
+								display: none
+								transition: unset
+								ul
+									flex-direction: column
+									li
+										margin-left: 0
+										a
+											font-size: 1rem
+										&:first-child
+											margin-left: 0
+								&::after
+									display: none
+					@media screen and ( min-width: 992px )
+						&:hover
+							.nav-link
+								color: $main
 					&.active
 						.nav-link
 							color: $main
@@ -151,6 +255,15 @@ header
 				&.active
 					opacity: 1
 					visibility: visible
+			.btn
+				&-yellow
+					font-size: r(13px)
+					em
+						font-size: 1rem
+				&-green
+					font-size: r(13px)
+					em
+						font-size: 1rem
 	@media screen and ( max-width: 767.98px )
 		.navbar-bottom
 			.navbar-brand

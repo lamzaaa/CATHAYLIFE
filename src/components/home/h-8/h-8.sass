@@ -1,29 +1,33 @@
 .home-socail-connect
 	.wrapper-content
-		max-width: 1020px
+		max-width: 985px
 		margin: 0 auto
-		.col-lg-3
-			padding: 0 10px
-			&:first-child
-				.col-item
-					.content
-						background: #71bf44
-			&:nth-child(2)
-				.col-item
-					.content
-						background: #00994e
-			&:nth-child(3)
-				.col-item
-					.content
-						background: #2354ad
-			&:last-child
-				.col-item
-					.content
-						background: #e11f26
+		display: flex
+		align-items: center
+		flex-direction: row
+		flex-wrap: wrap
 		.col-item
+			flex: 1
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			&:first-child
+				.content
+					background: #71bf44
+			&:nth-child(2)
+				.content
+					background: #00994e
+			&:nth-child(3)
+				.content
+					background: #2354ad
+			&:last-child
+				.content
+					background: #e11f26
+			+ .col-item
+				padding-left: 20px
 			.img
 				a
-					+img-ratio(230/262.5)
+					+img-ratio(230/230)
 			.content
 				padding: 23px
 				padding-top: 15px
@@ -35,6 +39,23 @@
 					font-style: 18/16*1rem
 					em
 						padding-right: 10px
-	@media screen and ( max-width: 767.98px )
-		.col-item
-			margin-bottom: 30px
+						font-size: 24/16*1rem
+						line-height: 24px
+			@media screen and ( max-width: 767.98px )
+				margin-bottom: 30px
+				flex: 1 2 50%
+				height: 300px
+				padding: 0
+				&:nth-child(3)
+					padding-left: 0
+				.img
+					height: 251px
+					a
+						height: 100%
+						padding-top: 0
+						img
+							position: static
+			@media screen and ( max-width: 575.98px )
+				flex: 1 0 100%
+				+ .col-item
+					padding: 0

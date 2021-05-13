@@ -286,3 +286,180 @@
 		background: $white
 		content: ''
 		transform: translateY(-50%)
+label.error
+	color: $red !important
+	font-style: italic
+	font-size: 10/16*1rem !important
+	font-weight: 400 !important
+	text-transform: unset !important
+	&::before
+		content: 'warning' !important
+		font-family: Material Icons !important
+		font-size: 10/16*1rem !important
+		font-style: normal !important
+		color: $red !important
+.wrapper-form
+	background: $white
+	box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
+	border-radius: 20px
+	padding: 30px
+	#frm-appointment
+		.col-form
+			.form-group
+				width: 100%
+				margin-bottom: 20px
+				label
+					font-size: 14/16*1rem
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: 13px
+					span
+						color: $red
+				input[type="text"],
+				input[type="date"],
+				select
+					width: 100%
+					height: 40px
+					border-radius: 20px
+					border: solid 1px #f0f0f0
+					color: $main
+					padding-left: 15px
+					&::placeholder
+						color: $main
+				input[type="text"]
+					&::placeholder
+						color: #999999
+					&#date
+						&::placeholder
+							color: $main
+
+				.frm-iput
+					position: relative
+					.icon
+						position: absolute
+						top: 20px
+						right: 15px
+						display: flex
+						transform: translateY(-50%)
+						em
+							font-size: 24/16*1rem
+							color: $main
+				ul
+					display: flex
+					li
+						position: relative
+						display: flex
+						align-items: flex-start
+						flex-direction: column
+						input[type="radio"]
+							display: none
+							&:checked ~ label::before
+								content: '\F0132'
+								color: $main
+							&:checked ~ label
+								color: $main
+
+						label
+							color: #999999
+							font-weight: 300
+							width: auto
+							height: auto
+							text-align: left
+							padding-left: 23px
+							line-height: 1.5
+							font-size: 0.875rem
+							text-transform: none
+							position: relative
+							transition: all, 0.5s
+							&:before
+								font-family: 'Material Design Icons'
+								content: '\F0131'
+								font-size: 20px
+								display: block
+								line-height: 14px
+								color: #999999
+								position: absolute
+								top: 50%
+								left: 0
+								transform: translateY(-50%)
+								transition: all, 0.5s
+						+ li
+							margin-left: 50px
+
+				&.frm-select
+					margin-bottom: 10px
+					ul
+						width: 100%
+						flex-direction: column
+						align-items: flex-start
+						li
+							width: 100%
+							margin-left: 0
+							margin-bottom: 7px
+							display: flex
+							align-items: flex-start
+							flex-direction: colum
+							input[type="text"],
+							select
+								width: 100%
+				&.frm-contact
+					ul
+						li
+							display: flex
+							align-items: flex-start
+							flex-direction: column
+							width: 50%
+							.frm-input
+								input[type="text"],
+								input[type="date"],
+								select
+									width: 100%
+						li+li
+									margin-left: 10px
+			&.col-contact
+				.form-group
+					margin-bottom: 18px
+					&.frm-contact
+						&:nth-child(2)
+							margin-bottom: 15px
+.bottom-wrapper
+	width: 100%
+	padding: 0 15px
+	.note
+		font-style: italic
+		color: $gray
+		font-size: 14/16*1rem
+		span
+			color: $red
+	.checkbox
+		margin-left: auto
+		input[type='checkbox']
+			display: none
+			&:checked ~ label::before
+				content: '\F0132'
+		label
+			color: $gray
+			font-weight: 300
+			width: auto
+			height: auto
+			text-align: left
+			padding-left: 23px
+			line-height: 1.5
+			font-size: 14/16*1rem
+			font-style: italic
+			text-transform: none
+			position: relative
+			transition: all, 0.5s
+			&:before
+				font-family: 'Material Design Icons'
+				content: '\F0131'
+				font-size: 20px
+				font-style: normal
+				display: block
+				line-height: 14px
+				color: $main
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+				transition: all, 0.5s

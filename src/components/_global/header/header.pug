@@ -27,18 +27,29 @@ header
 			a.navbar-brand(href="index.html")
 				img(src="./img/logo.png" alt="")
 			h1.header-title.f-16.fw-700.text-uppercase hạnh phúc mỗi ngày 
+			.icon-mobile 
+				em.material-icons home
 			.nav-main.ml-auto
 				ul.navbar-nav.d-flex.align-center
-					li.nav-item.active
-						a.nav-link.f-16(href='lap-ke-hoach.html') Lập kế hoạch sống
 					li.nav-item
-						a.nav-link.f-16(href='bao-ve-hanh-phuc.html') Bảo vệ hạnh phúc
+						a.nav-link.f-16(href='lap-ke-hoach.html') Lập kế hoạch sống
+					li.nav-item.dropdown
+						.title-sub
+							a.nav-link.f-16(href='bao-ve-hanh-phuc.html') Bảo vệ hạnh phúc
+							.btn-sub 
+								em.lnr.lnr-chevron-down 
+						.dopdown-menu 
+							ul 
+								li 
+									a(href="") Câu chuyện bảo hiểm 
+								li 
+									a(href="") Kiến thức bảo hiểm
 					li.nav-item
 						a.nav-link.f-16(href='su-kien.html') Sự kiện
 			a.btn.btn-defaul.btn-yellow(href="") 
 				em.material-icons important_devices
 				| Bảo hiểm trực tuyến
-			a.btn.btn-defaul.btn-green.color-white(href="") 
+			a.btn.btn-defaul.btn-green.color-white(href="dang-ky-tu-van.html") 
 				em.material-icons event
 				| Đăng ký tư vấn
 			.btn.btn-toggle

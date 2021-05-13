@@ -21,7 +21,7 @@ section.section.planning-catelog
 						img(src="./img/icon/zalo.png", alt="")
 		.wrapper-list
 			ul
-				li.active
+				li
 					a(href='#planning-1') Rủi ro
 				li
 					a(href='#planning-2') Lý do cần bảo hiểm nhân thọ
@@ -31,7 +31,7 @@ section.section.planning-family#planning-1
 	.container 
 		.planning-title rủi ro
 		.row 
-			.col-lg-4 
+			.col-lg-4.col-md-6 
 				.item 
 					.item-img 
 						img(src="./img/icon/heart.png", alt="")
@@ -40,7 +40,7 @@ section.section.planning-family#planning-1
 						.desc Theo thống kê, mỗi năm nước ta có hơn 
 							span 200.000  
 							| trường hợp đột quỵ 
-			.col-lg-4 
+			.col-lg-4.col-md-6 
 				.item 
 					.item-img 
 						img(src="./img/icon/kidney.png", alt="")
@@ -49,7 +49,7 @@ section.section.planning-family#planning-1
 						.desc Tại Việt Nam, ước tính có khoảng 5 triệu người bị suy thận và hàng năm có khoảng 
 							span 8.000  
 							| ca bệnh mới
-			.col-lg-4 
+			.col-lg-4.col-md-6 
 				.item 
 					.item-img 
 						img(src="./img/icon/car.png", alt="")
@@ -96,8 +96,8 @@ section.section.planning-risk#planning-3
 		.row 
 			.col-lg-4 
 				.col-item 
-					.title.f-24 Kế hoạch Cơ bản
-					ul 
+					.title.green-1.f-24.color-white Kế hoạch Cơ bản
+					ul.fees-list 
 						li 
 							span Phí năm
 							p 12.000.000đ
@@ -105,28 +105,97 @@ section.section.planning-risk#planning-3
 							span Phí tháng
 							p 1.056.000đ
 					.faq-list#faq-list
-						.faq-item 
-							.title.d-flex.align-center
-								p Quyền lợi tử vong/ TTTBW
-								.range.d-flex.align-center
-									p
-										span 3
-											| /5
-									em.material-icons grade
-							.desc 
-								ul 
-									li 
-										p Viện phí/ ngày
-										p 200.000 ~ 300.000đ
-									li
-										p Chăm sóc tại nhà/ ngày
-										p 200.000 ~ 300.000đ
-									li
-										p Phòng chăm sóc đặc biệt
-										p 200.000đ
-									li
-										p Phẫu thuật nội trú
-										p 1.000.000đ
+						-for(i=1; i<7; i++)
+							.faq-item
+								.title
+									p Quyền lợi tử vong/ TTTBW
+									.range.d-flex.align-center
+										p
+											span 3
+											span /5
+										em.material-icons grade
+								.desc 
+									ul 
+										li 
+											p Viện phí/ ngày
+											p 200.000 ~ 300.000đ
+										li
+											p Chăm sóc tại nhà/ ngày
+											p 200.000 ~ 300.000đ
+										li
+											p Phòng chăm sóc đặc biệt
+											p 200.000đ
+										li
+											p Phẫu thuật nội trú
+											p 1.000.000đ
+			.col-lg-4 
+				.col-item 
+					.title.green-2.f-24.color-white Kế hoạch Toàn diện
+					ul.fees-list 
+						li 
+							span Phí năm
+							p 12.000.000đ
+						li 
+							span Phí tháng
+							p 1.056.000đ
+					.faq-list#faq-list
+						-for(i=1; i<7; i++)
+							.faq-item
+								.title
+									p Quyền lợi tử vong/ TTTBW
+									.range.d-flex.align-center
+										p
+											span 3
+											span /5
+										em.material-icons grade
+								.desc 
+									ul 
+										li 
+											p Viện phí/ ngày
+											p 200.000 ~ 300.000đ
+										li
+											p Chăm sóc tại nhà/ ngày
+											p 200.000 ~ 300.000đ
+										li
+											p Phòng chăm sóc đặc biệt
+											p 200.000đ
+										li
+											p Phẫu thuật nội trú
+											p 1.000.000đ
+			.col-lg-4 
+				.col-item 
+					.title.yellow.f-24.color-white Kế hoạch Nâng cao
+					ul.fees-list 
+						li 
+							span Phí năm
+							p 12.000.000đ
+						li 
+							span Phí tháng
+							p 1.056.000đ
+					.faq-list#faq-list
+						-for(i=1; i<7; i++)
+							.faq-item
+								.title
+									p Quyền lợi tử vong/ TTTBW
+									.range.d-flex.align-center
+										p
+											span 3
+											span /5
+										em.material-icons grade
+								.desc 
+									ul 
+										li 
+											p Viện phí/ ngày
+											p 200.000 ~ 300.000đ
+										li
+											p Chăm sóc tại nhà/ ngày
+											p 200.000 ~ 300.000đ
+										li
+											p Phòng chăm sóc đặc biệt
+											p 200.000đ
+										li
+											p Phẫu thuật nội trú
+											p 1.000.000đ
 		a.btn.btn-defaul.btn-yellow(href='')
 			| Đăng ký tư vấn
 		.note-box

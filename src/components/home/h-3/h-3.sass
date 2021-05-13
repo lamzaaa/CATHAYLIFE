@@ -1,6 +1,7 @@
 .home-planning
-	.wrapper-content
-		padding-bottom: 44px
+	.wrapper-planning
+		position: relative
+		padding-bottom: 30px
 		border-bottom: solid 1px #e5e5e5
 		.col-item
 			.img
@@ -12,8 +13,28 @@
 					margin: 20px 0
 					padding-right: 50px
 					line-height: 22px
+		.swiper-button-next
+			right: 0 !important
+			&::after
+				content: '\e876' !important
+		.swiper-button-prev
+			left: 0 !important
+			&::after
+				content: '\e875' !important
+		.swiper-button-next,
+		.swiper-button-prev
+			top: 30%
+			background: none
+			&::before
+				display: none
+			&::after
+				color: $white
+				font-family: Linearicons-Free !important
+				font-size: r(36px)
+			@media screen and ( min-width: 992px )
+				display: none
 	@media screen and ( max-width: 1199.98px )
-		.wrapper-content
+		.wrapper-planning
 			.col-item
 				.content
 					padding: 10px 0
@@ -23,7 +44,7 @@
 						margin: 5px 0
 						margin-bottom: 15px
 	@media screen and ( max-width: 991.98px )
-		.wrapper-content
+		.wrapper-planning
 			.col-item
 				margin-bottom: 30px
 			.col-lg-4

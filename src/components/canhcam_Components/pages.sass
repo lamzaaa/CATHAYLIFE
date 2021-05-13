@@ -21,14 +21,13 @@
 				a, span
 					width: 40px
 					height: 40px
-					font-weight: 600
-					border-radius: 50%
-					font-size: 14/16*1rem
-					color: #999999
+					font-size: 1rem
+					line-height: 24px
+					color: $main
 					display: flex
 					justify-content: center
 					align-items: center
-					background: #e5e5e5
+					background: $white
 					transition: .2s ease-in-out all
 					// border-radius: 5px
 					overflow: hidden
@@ -36,9 +35,8 @@
 
 				&.active, &:hover
 					a, span
-						color: $main
-						background: transparent
-						border: 1px solid $main
+						color: $white
+						background: $main
 				@media(min-width: 1024px)
 					a, span
 						width: 40px

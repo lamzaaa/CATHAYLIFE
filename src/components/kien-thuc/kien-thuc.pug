@@ -1,0 +1,51 @@
+section.section.knowledge-page 
+	.container 
+		.row 
+			.col-lg-9
+				.section-title Kiến thức bảo hiểm 
+				.big-item 
+					.big-img 
+						a(href="") 
+							img.lazyload(data-src="./img/kien-thuc/i-1.png", alt="")
+					.big-content.color-white 
+						.title.f-20
+							a(href="") Rủi ro và những khái niệm liên quan trọng Bảo hiểm
+						.view-more
+							a(href="") Xem thêm
+				.small-item
+					-for(i=2; i<6; i++)
+						.item.d-flex
+							.item-img 
+								a(href="") 
+									img.lazyload(data-src="./img/kien-thuc/i-"+i+".png", alt="")
+							.item-content 
+								.title.f-20 
+									a(href="") Yêu cầu bồi thường bảo hiểm thật đơn giản
+								.desc.f-14.lcl.lcl-3 Nhiều thời hạn hợp đồng thích hợp với nhiều kế hoạch tiết kiệm Quyền lợi đáo hạn hấp dẫn với lãi suất cao giúp khách hàng có một kế hoạch tiết kiệm hiệu quả.
+								.view-more
+									a(href="") Xem thêm
+				.pages
+					.modulepager
+						ul.pagination 
+							li.active
+								a(href="") 1
+							li
+								a(href="") 2
+							li
+								a(href="") 3
+			.col-lg-3 
+				.section-title Video 
+				.video-list 
+					-for(i=6; i<10; i++)
+						.video-item 
+							.img 
+								a(href="https://www.youtube.com/watch?v=rMHMd7s8XQI" data-fancybox="") 
+									img.lazyload(data-src="./img/kien-thuc/i-"+i+".png", alt="")
+								.icon
+									a(href="https://www.youtube.com/watch?v=rMHMd7s8XQI" data-fancybox="")
+										img(src="./img/icon/video.png", alt="")
+							.content 
+								time 15.06.2020
+								.title 
+									a(href="") Ý nghĩa của bảo hiểm nhân thọ
+

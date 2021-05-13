@@ -116,3 +116,32 @@
 		background: #ffd800
 		border: solid 1px transparent
 		margin-left: 20px
+	&-booking,
+	&-detail
+		display: flex !important
+		align-items: center
+		justify-content: center
+		width: 160px
+		height: 40px
+		border-radius: 20px
+		border: solid 1px $white
+		color: $white
+		font-weight: 500
+		font-size: 1rem
+		line-height: 36px
+		transition: all .5s
+		.material-icons
+			padding-right: 10px
+		@media screen and ( max-width: 991.98px )
+			font-size: 14/16*1rem
+
+	&-booking
+		&:hover
+			background: $yellow
+			color: $text
+			border: solid 1px transparent
+	&-detail
+		margin-top: 10px
+		&:hover
+			background: $main
+			border: solid 1px transparent

@@ -1,0 +1,182 @@
+.detail-page
+	padding-top: 60px
+	background: #fbf9e6
+	.wrap-infor
+		padding: 60px
+		border-radius: 20px
+		background: $white
+		.infor-block
+			display: flex
+			margin-bottom: 30px
+			.img
+				min-width: 285px
+				height: 360px
+				margin-right: 60px
+				position: relative
+				&::after
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					height: 5px
+					background: #71bf44
+					content: ''
+			@media screen and ( max-width: 1199.98px )
+				.img
+					margin-right: 30px
+			.wrap-content
+				.title
+					text-transform: uppercase
+					line-height: 22px
+				.sub-title
+					line-height: 33px
+					padding-bottom: 13px
+					margin-bottom: 10px
+					border-bottom: solid 1px #e0e0e0
+				.content
+					padding-top: 10px
+					.desc
+						display: flex
+						margin-bottom: 18px
+						p
+							font-size: 60/16*1rem
+							font-weight: 700
+							line-height: 28px
+							color: $main
+						strong
+							font-size: 1rem
+							line-height: 24px
+							letter-spacing: 0.09px
+					ul
+						li
+							margin-bottom: 16px
+							position: relative
+							&::before
+								position: absolute
+								top: 50%
+								left: 0
+								transform: translateY(-50%)
+								font-size: 1rem
+								font-family: Material Icons
+								content: 'chevron_right'
+								color: $main
+							&:last-child
+								margin-bottom: 0
+							p
+								padding-left: 20px
+								line-height: 22px
+					.btn-booking
+						background: $main
+						border: solid 1px $main
+						margin-top: 30px
+						@media screen and ( min-width: 992px )
+							&:hover
+								background: $yellow
+								border: solid 1px transparent
+				@media screen and ( max-width: 1199.98px )
+					.sub-title
+						padding-bottom: 0
+					.content
+						padding-top: 7px
+						.desc
+							margin-bottom: 15px
+						ul
+							li
+								margin-bottom: 10px
+				@media screen and ( max-width: 991.98px )
+					.content
+						.desc
+							margin-bottom: 7px
+						ul
+							li
+								margin-bottom: 7px
+						.btn-booking
+							margin-top: 10px
+			@media screen and ( max-width: 575.98px )
+				flex-direction: column
+				.img
+					min-width: 100%
+					height: auto
+					margin-bottom: 30px
+		.sub-desc
+			ul
+				li
+					margin-bottom: 16px
+					position: relative
+					list-style-type: '-'
+					p
+						padding-left: 10px
+						font-size: 1rem
+						line-height: 24px
+		@media screen and ( max-width: 991.98px )
+			padding: 30px
+	@media screen and ( max-width: 991.98px )
+		padding-top: 40px
+.advisory-other
+	background: #fbf9e6
+	.wrap-story-slide
+		position: relative
+		.swiper-inner
+			.img
+				position: relative
+				&::after
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					height: 5px
+					background: #71bf44
+					content: ''
+				a
+					+img-ratio(360/285)
+				.wrap-button
+					position: absolute
+					bottom: 40px
+					left: 50%
+					transform: translateX(-50%)
+					a
+						padding-top: 0
+			.content
+				padding-top: 24px
+				padding-bottom: 30px
+				a
+					font-weight: 500
+					font-size: 20/16*1rem
+					color: $text
+					text-transform: uppercase
+				.desc
+					padding-top: 21px
+					line-height: 22px
+					font-size: 1rem
+		.swiper-button-next,
+		.swiper-button-prev
+			cursor: pointer
+			opacity: 1
+			background: none
+			border-radius: 0
+			&::after
+				display: none
+			&::before
+				font-family: Material Icons
+				font-size: 26/16*1rem
+				color: $main
+			@media screen and ( max-width: 1024.98px )
+				display: none
+		.swiper-button-next
+			&::before
+				content: 'arrow_forward_ios'
+		.swiper-button-prev
+			&::before
+				content: 'arrow_back_ios'
+		@media screen and ( max-width: 1024.98px )
+			margin-bottom: 50px
+		.swiper-pagination
+			width: 100%
+			&-bullet
+				width: 10px
+				height: 10px
+				margin-left: 10px
+				&-active
+					background: $main
+			@media screen and ( min-width: 1025px )
+				display: none

@@ -1,0 +1,21 @@
+.cover-page
+	.cover-list
+		padding: 40px 0
+		max-width: 1020px
+		margin: 0 auto
+		.item
+			&-img
+				+img-ratio(380/525)
+			&-content
+				padding-right: 75px
+				.title
+					padding: 10px 0
+					line-height: 36px
+				.desc
+					margin-bottom: 20px
+	@media screen and ( max-width: 575.98px )
+		.cover-list
+			.col-lg-6
+				&:last-child
+					.item
+						margin-top: 30px

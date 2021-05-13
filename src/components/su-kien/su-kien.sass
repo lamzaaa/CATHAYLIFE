@@ -1,0 +1,105 @@
+.event-big,
+.event-small
+	background: #f8f8f8
+	.item
+		&-img
+			position: relative
+			a
+				+img-ratio(165/285)
+			.video-play
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 60px
+				transform: translate(-50%, -50%)
+				a
+					padding: 0
+					img
+						position: static
+
+		&-content
+			padding: 30px
+			padding-top: 10px
+			padding-bottom: 57px
+			background: $white
+			transition: all .5s
+			.title
+				padding-top: 10px
+				border-top: solid 1px #e5e5e5
+				a
+					transition: all .5s
+
+		.view-more
+			width: 100%
+			padding: 8px 26px
+			opacity: 0
+			visibility: hidden
+			background: #f5f5f5
+			transition: all .5s
+			position: absolute
+			bottom: 0
+			left: 0
+
+			&::after
+				display: none
+			a
+				position: relative
+				padding-right: 13px
+				&::after
+					position: absolute
+					top: 50%
+					left: 100%
+					width: 20px
+					height: 2px
+					background: $white
+					content: ''
+					transform: translateY(-50%)
+	.button
+		width: 100%
+		.btn-readmore
+			margin: 0 auto
+.event-big
+	.item
+		&-content
+			.title
+				a
+					font-weight: 700
+	@media screen and ( max-width: 991.98px )
+		.item
+			margin-bottom: 30px
+.event-small
+	padding-bottom: 80px
+	.item
+		margin-bottom: 30px
+		position: relative
+		&-content
+			.title
+				padding-right: 40px
+				a
+					transition: all .5s
+		@media screen and ( min-width: 768px )
+			&:hover
+				.item-content
+					transform: translateY(-40px)
+					.title
+						a
+							font-weight: 700
+				.view-more
+					opacity: 1
+					visibility: visible
+					a
+						color: $main
+						&::after
+							background: $main
+	@media screen and ( max-width: 1024.98px )
+		padding-bottom: 30px
+	@media screen and ( max-width: 767.98px )
+		.item
+			.view-more
+				opacity: 1
+				visibility: visible
+				color: $main
+				position: static
+				a
+					&::after
+						background: $main

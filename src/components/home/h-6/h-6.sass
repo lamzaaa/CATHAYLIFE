@@ -7,6 +7,7 @@
 			margin: 0 auto
 			overflow: visible
 			.swiper-inner
+				position: relative
 				.img
 					position: relative
 					a
@@ -20,13 +21,38 @@
 						height: 100%
 						content: ''
 						background: rgba($color: #cccccc, $alpha: .65)
+				.content
+					position: absolute
+					bottom: 0
+					padding: 40px 0
+					left: 0
+					width: 100%
+					text-align: center
+					opacity: 0
+					visibility: hidden
+					transition: all .5s
+					pointer-events: auto
+					a
+						font-size: 24/16*1rem
+						color: $white
+						font-weight: 700
+
 			.swiper-slide
 				&-active
 					.swiper-inner
 						.img
 							&::after
 								background: none
-
+						@media screen and ( min-width: 992px )
+							&:hover
+								.content
+									opacity: 1
+									visibility: visible
+						@media screen and ( max-width: 991.98px )
+							.content
+								padding: 20px 0
+								opacity: 1
+								visibility: visible
 			.swiper-button-next,
 			.swiper-button-prev
 				background: none
