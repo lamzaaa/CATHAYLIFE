@@ -10,8 +10,10 @@ section.section.advisory-page
 			.row 
 				.col-lg-8
 					.img
-						video(playsinline='1' controls='3' poster='./img/tu-van/i-1.png')
-							source(src='./img/gioi-thieu.mp4' type='video/mp4')
+						//- video(playsinline='1' controls='3' poster='./img/tu-van/i-1.png')
+						//- 	source(src='./img/tu-van/i-1.png/')
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/V6pLnQdGA_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						img.lazyload(data-src="./img/tu-van/i-1.png" alt="")
 				.col-lg-4
 					.content 
 						.section-title Video
@@ -107,7 +109,7 @@ section.section.advisory-page
 									li
 										select(name="") 
 											option(value="Khung giờ") Khung giờ
-					
+
 					.bottom-wrapper.d-flex.align-center
 						.note 
 							span (*) 

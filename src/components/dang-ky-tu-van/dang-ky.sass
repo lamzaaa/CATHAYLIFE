@@ -36,8 +36,8 @@
 						content: url('../img/icon/down.png')
 						transform: translateX(-50%)
 						font-size: 0
-				&:first-child
-					display: none
+				// &:first-child
+				// 	display: none
 
 	.advisory-desc
 		margin-top: 40px
@@ -49,6 +49,33 @@
 			position: relative
 			border-radius: 20px
 			+img-ratio(435/810)
+			position: relative
+			&::before
+				content: "\e825"
+				font-family: 'Linearicons-Free'
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				color: $white
+				font-size: r(50px)
+				z-index: 3
+				transition: .3s all ease-in-out
+				pointer-events: none
+			&.active
+				&::before
+					font-size: r(20px)
+					opacity: 0
+			img
+				transition: .3s all ease-in-out
+				&.active
+					opacity: 0
+					pointer-events: none
+					visibility: hidden
+			iframe
+				pointer-events: none
+				&.active
+					pointer-events: visible
 			.icon
 				position: absolute
 				top: 50%
