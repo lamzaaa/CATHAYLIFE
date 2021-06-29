@@ -34,7 +34,7 @@ section.section.home-advisory
 								label ngày, tháng, năm sinh
 									span *
 								.frm-iput
-									input(placeholder="Vui lòng chọn" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date")
+									input(placeholder="Vui lòng chọn" type="text" onfocus="(this.type='date')" min="2021-06-15" id="date")
 									.icon 
 										em.material-icons event
 							.form-group 
@@ -75,7 +75,7 @@ section.section.home-advisory
 								ul 
 									li
 										.frm-iput
-											input(placeholder="Ngày tháng" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date")
+											input(placeholder="Ngày tháng" type="text" onfocus="(this.type='date')" id="date" min="2021-06-15")
 											.icon 
 												em.material-icons event
 									li
@@ -86,13 +86,13 @@ section.section.home-advisory
 								ul 
 									li
 										.frm-iput
-											input(placeholder="Ngày tháng" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date")
+											input(placeholder="Ngày tháng" type="text" onfocus="(this.type='date')" min="2021-06-15" id="date")
 											.icon 
 												em.material-icons event
 									li
 										select(name="") 
 											option(value="Khung giờ") Khung giờ
-					
+
 					.bottom-wrapper.d-flex.align-center
 						.note 
 							span (*) 

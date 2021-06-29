@@ -302,7 +302,10 @@ label.error
 	background: $white
 	box-shadow: 0 0 20px 0 rgba($color: $black, $alpha: .18)
 	border-radius: 20px
-	padding: 30px
+	padding: 30px 15px
+	@media screen and ( min-width: 576px )
+		padding: 30px
+
 	#frm-appointment
 		.col-form
 			.form-group
@@ -335,6 +338,10 @@ label.error
 
 				.frm-iput
 					position: relative
+					width: 100%
+					input
+						padding-right: 10px
+
 					.icon
 						position: absolute
 						pointer-events: none
@@ -359,7 +366,6 @@ label.error
 								color: $main
 							&:checked ~ label
 								color: $main
-
 						label
 							color: #999999
 							font-weight: 300
@@ -405,18 +411,26 @@ label.error
 								width: 100%
 				&.frm-contact
 					ul
+						@media screen and ( max-width: 1279px )
+							flex-direction: column
+
 						li
 							display: flex
 							align-items: flex-start
 							flex-direction: column
-							width: 50%
+							width: 100%
 							.frm-input
 								input[type="text"],
 								input[type="date"],
 								select
 									width: 100%
 						li+li
-									margin-left: 10px
+									margin-top: 10px
+									margin-left: 0
+									@media screen and ( min-width: 1279px )
+										margin-top: 0
+										margin-left: 10px
+
 			&.col-contact
 				.form-group
 					margin-bottom: 18px

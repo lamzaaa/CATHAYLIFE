@@ -167,9 +167,12 @@ select
 	position: relative
 	background-image: url('../img/icon/expand_more.png')
 	background-repeat: no-repeat
-	background-position: 95%
+	background-position: center right 15px
 	color: $main
 	border: none
+	@media screen and ( max-width: 768px )
+		background-position: center right 17px
+
 	&::-ms-expand
 		display: none
 input[type="date"]
